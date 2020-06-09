@@ -27,9 +27,7 @@ function loadPath(id) {
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
-  $.get('assets/panel1.html', function(data) {
-    return data;
-  });
+  return "<img src='assets/panel1.svg' class='storySvg' />"; 
   } else if(id == 2) {
     return "two"
   } else if(id == 3) {
@@ -37,7 +35,6 @@ function loadPath(id) {
   } else if(id == 4) {
     $(".nextButton").hide();
     nextPossible = false;
-
     return "<a onclick='nextPath(5)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(6)'" + ">OPTION 2</a>"
   } else if(id == 5) {
 
