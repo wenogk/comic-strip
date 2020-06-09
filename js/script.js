@@ -14,6 +14,3 @@ gsap.to(".languageButton", {duration: 3, opacity:1});
 function box() {
   gsap.to(".boxContainer", {duration: 2, top:100, width:"60%", left:"20%"});
 }
-setTimeout(() => {
-
-}, 3000);

@@ -60,7 +60,7 @@ left: calc(50% - 300px);
 }
 
 .boxContainer {
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   width:10%;
   min-width: 100px;
@@ -95,3 +95,23 @@ left: calc(50% - 300px);
   padding:2px;
 }
 .backButton >img { width: 100%; height: 100%; }
+
+.newStory {
+  position: absolute;
+  top:0;
+  left:100%;
+  z-index: 3;
+  background:blue;
+  height:100%;
+  width:100%;
+}
+
+.prevStory {
+  position: absolute;
+  top:0;
+  right:200%;
+  z-index: 3;
+  background:green;
+  height:100%;
+  width:100%;
+}
