@@ -66,6 +66,7 @@ left: calc(50% - 300px);
   min-width: 100px;
   left:45%;
   border-radius: 15px;
+  border: 3px solid black;
   background: white;
   height:60%;
   top: -moz-calc(100% - 50px);
@@ -121,4 +122,9 @@ left: calc(50% - 300px);
 .storySvg {
   height:80%;
   width:auto;
+}
+
+.imgColumn {
+  height:80vh;
+
 }

@@ -37,7 +37,7 @@ function loadPath(id) {
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
-  return "<div class='container'><div class='row'><div class='col-md-4 col-xs-12'>" + svgPanel("panel1a") + "</div><div class='col-md-4 col-xs-12'>" + svgPanel("panel1b") + "</div>  <div class='col-md-4 col-xs-12'>" + svgPanel("panel1c") + "</div></div></div>";
+  return "<div class='container'><div class='row'><div class='col-md-4 col-xs-12 imgColumn'>" + svgPanel("panel1a") + "</div><div class='col-md-4 col-xs-12 imgColumn'>" + svgPanel("panel1b") + "</div>  <div class='col-md-4 col-xs-12 imgColumn'>" + svgPanel("panel1c") + "</div></div></div>";
   } else if(id == 2) {
     return svgPanel("panel1a");
   } else if(id == 3) {
@@ -68,7 +68,7 @@ function nextPath(id=null) {
     } else {
       currentPath = id
     }
-    let element = "<div style='background:" + "#"+((1<<24)*Math.random()|0).toString(16) +"' class='path_" + currentPath + " newStory' >" + loadPath(currentPath)  + "</div>"
+    let element = "<div style='background:white;' class='path_" + currentPath + " newStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
     gsap.to(".path_" + currentPath, {duration: 1, left:0, ease: "power4.out"}); // after this delete the previous path element
   }
@@ -77,7 +77,7 @@ function nextPath(id=null) {
 function previousPath() {
   emptyAllPathsExceptOne(currentPath);
   if(currentPath<=1) {
-    //alert("remove all")
+    gsap.to(".path_" + currentPath, {duration: 1, right:"200%", ease: "power4.out"});
     currentPath = 0;
   } else {
     let tempPath = prevPath;
@@ -89,7 +89,7 @@ function previousPath() {
     }
 
   //  alert(currentPath)
-    let element = "<div style='background:" + "#"+((1<<24)*Math.random()|0).toString(16) +"' class='path_" + currentPath + " prevStory' >" + loadPath(currentPath)  + "</div>"
+    let element = "<div style='background:white;' class='path_" + currentPath + " prevStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
     gsap.to(".path_" + currentPath, {duration: 1, left:0, ease: "power4.out"}); // after this delete the previous path element
 
