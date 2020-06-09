@@ -27,7 +27,9 @@ function loadPath(id) {
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
-    return "one"
+  $.get('assets/panel1.html', function(data) {
+    return data;
+  });
   } else if(id == 2) {
     return "two"
   } else if(id == 3) {
