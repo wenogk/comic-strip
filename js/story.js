@@ -77,7 +77,7 @@ function nextPath(id=null) {
 function previousPath() {
   emptyAllPathsExceptOne(currentPath);
   if(currentPath<=1) {
-    gsap.to(".path_" + currentPath, {duration: 1, right:"200%", ease: "power4.out"});
+    gsap.to(".path_" + currentPath, {duration: 2, scale:"0.5", left: "-100%", ease: "power4.out"});
     currentPath = 0;
   } else {
     let tempPath = prevPath;
