@@ -10,7 +10,9 @@ gsap.to(".firstHeader", {duration: 2, opacity:0});
 }, 4000);
 
 setTimeout(() => {
-gsap.to(".languageButton", {duration: 3, opacity:1});
+gsap.to(".language1", {duration: 1, top: "50%", opacity:1});
+gsap.to(".language2", {duration: 2, top: "50%", opacity:1});
+gsap.to(".language3", {duration: 3, top: "50%", opacity:1});
 }, 6000);
 
 function box() {

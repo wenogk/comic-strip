@@ -1,6 +1,22 @@
 let currentPath = 0;
 let prevPath = 0;
 let nextPossible = true;
+let backPossible = true;
+
+$( ".language1" ).click(function() {
+  gsap.timeline({}).to(".language1", {duration: 0.25, y: "-30px", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
+});
+
+$( ".language2" ).click(function() {
+  gsap.timeline({}).to(".language2", {duration: 0.25, y: "-30px", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
+
+});
+
+$( ".language3" ).click(function() {
+  gsap.timeline({}).to(".language3", {duration: 0.25, y: "-30px", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
+
+});
+
 $( ".nextButton" ).click(function() {
   nextPath();
 });
@@ -12,7 +28,9 @@ $( ".backButton" ).click(function() {
 $(document).keydown(function(e){
 
     if (e.which == 37) {
+      if(backPossible) {
          previousPath();
+       }
     }
     if (e.which == 39) {
       if(nextPossible) {
@@ -58,10 +76,12 @@ function loadPath(id) {
 function nextPath(id=null) {
   emptyAllPathsExceptOne(currentPath);
   if(currentPath==7) {
+    backPossible = false;
     box();
     $(".nextButton").hide()
     $(".backButton").hide()
   } else {
+    backPossible = true;
     prevPath = currentPath;
     if(id==null) {
       currentPath+=1;
@@ -70,14 +90,16 @@ function nextPath(id=null) {
     }
     let element = "<div style='background:white;' class='path_" + currentPath + " newStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
-    gsap.to(".path_" + currentPath, {duration: 1, left:0, ease: "power4.out"}); // after this delete the previous path element
+    gsap.to(".path_" + prevPath, {duration: 3, left:"-100%", ease: "power4.out"}); // after this delete the previous path element
+
+    gsap.to(".path_" + currentPath, {duration: 3, left:0, ease: "power4.out"}); // after this delete the previous path element
   }
 }
 
 function previousPath() {
   emptyAllPathsExceptOne(currentPath);
   if(currentPath<=1) {
-    gsap.to(".path_" + currentPath, {duration: 2, scale:"0.5", left: "-100%", ease: "power4.out"});
+    gsap.to(".path_" + currentPath, {duration: 3, scale:"0.5", left: "-100%", ease: "power4.out"});
     currentPath = 0;
   } else {
     let tempPath = prevPath;
@@ -91,7 +113,8 @@ function previousPath() {
   //  alert(currentPath)
     let element = "<div style='background:white;' class='path_" + currentPath + " prevStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
-    gsap.to(".path_" + currentPath, {duration: 1, left:0, ease: "power4.out"}); // after this delete the previous path element
+    gsap.to(".path_" + prevPath, {duration: 3, left:"100%", ease: "power4.out"});
+    gsap.to(".path_" + currentPath, {duration: 3, left:0, ease: "power4.out"}); // after this delete the previous path element
 
   }
 

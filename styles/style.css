@@ -16,18 +16,22 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .languageButton {
   position: absolute;
   background: #660000;
-  top: 50%;
+  top: -50%;
   width: 200px;
   height: 200px;
   line-height: 200px;
   text-align: center;
   color: white;
   font-size: 40px;
-  border-radius: 100%;
+  transform: rotate(-45deg);
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
   margin-top: -200px;
   margin-left: -100px;
   cursor: pointer;
   opacity:0;
+}
+.languageButton > span {
+  transform: rotate(60deg);
 }
 
 .languageButton:hover {
