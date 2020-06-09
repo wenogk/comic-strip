@@ -9,53 +9,60 @@ $( ".backButton" ).click(function() {
   previousPath();
 });
 
+$(document).keydown(function(e){
+    if (e.which == 37) {
+         previousPath();
+    }
+    if (e.which == 39) {
+       nextPath();
+    }
+});
 
-let PATHS = {
-  1: {
-    image: ""
-  },
-  2: {
-    image: ""
-  },
-  3: {
-    image: ""
-  },
-  4: {
-    image: ""
-  },
-  5: {
-    image: ""
-  },
-  6: {
-    image: ""
-  },
-  7 : {
-    image: ""
-  }
-}
 
 function loadPath(id) {
-  let element = "<div class='path_" + id + " newStory' ></div>"
-  $("body").append(element);
-  gsap.to(".path_" + id, {duration: 1, left:0}); //after this delete the previous path element
+  if(id == 1) {
+    return "one"
+  } else if(id == 2) {
+    return "two"
+  } else if(id == 3) {
+    return "three"
+  } else if(id == 4) {
+    return "four"
+  } else if(id == 5) {
+    return "five"
+  } else if(id == 6) {
+    return "six"
+  } else if(id == 7) {
+    return "seven"
+  }
 }
 
 function nextPath() {
-  if(currentPath==1) {
-    
+  if(currentPath==7) {
+    box();
+    $(".nextButton").hide()
+    $(".backButton").hide()
   } else {
-    let element = "<div class='path_" + currentPath + " newStory' ></div>"
+    currentPath+=1;
+    let element = "<div style='background:" + "#"+((1<<24)*Math.random()|0).toString(16) +"' class='path_" + currentPath + " newStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
     gsap.to(".path_" + currentPath, {duration: 1, left:0}); // after this delete the previous path element
   }
-  currentPath+=1;
-
-  //alert("clicked")
 }
 
 function previousPath() {
-  currentPath-=1;
-  let element = "<div class='path_" + currentPath + " prevStory' ></div>"
-  $("body").append(element);
-  gsap.to(".path_" + currentPath, {duration: 1, left:0});
+  if(currentPath<=1) {
+    $(".newStory").remove();
+    $(".prevStory").remove();
+    //alert("remove all")
+
+  } else {
+    currentPath-=1;
+  //  alert(currentPath)
+    let element = "<div style='background:" + "#"+((1<<24)*Math.random()|0).toString(16) +"' class='path_" + currentPath + " prevStory' >" + loadPath(currentPath)  + "</div>"
+    $("body").append(element);
+    gsap.to(".path_" + currentPath, {duration: 1, left:0}); // after this delete the previous path element
+
+  }
+
 }
