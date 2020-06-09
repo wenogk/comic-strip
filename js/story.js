@@ -27,7 +27,7 @@ function loadPath(id) {
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
-  return "<img src='assets/panel1a.svg' class='storySvg' />";
+  return "<div class='container'><div class='row'><div class='col-md-4 col-xs-12'><img src='assets/panel1a.svg' class='storySvg' /></div><div class='col-md-4 col-xs-12'><img src='assets/panel1b.svg' class='storySvg' /></div>  <div class='col-md-4 col-xs-12'><img src='assets/panel1c.svg' class='storySvg' /></div></div></div>";
   } else if(id == 2) {
     return "<img src='assets/panel2.svg' class='storySvg' />"
   } else if(id == 3) {
