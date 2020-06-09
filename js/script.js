@@ -4,9 +4,11 @@
 setTimeout(() => {
 gsap.to(".firstHeader", {duration: 3, opacity:1});
 }, 1000);
+
 setTimeout(() => {
 gsap.to(".firstHeader", {duration: 2, opacity:0});
 }, 4000);
+
 setTimeout(() => {
 gsap.to(".languageButton", {duration: 3, opacity:1});
 }, 6000);

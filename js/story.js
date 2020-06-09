@@ -27,22 +27,22 @@ function loadPath(id) {
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
-  return "<img src='assets/panel1.svg' class='storySvg' />"; 
+  return "<img src='assets/panel1.svg' class='storySvg' />";
   } else if(id == 2) {
-    return "two"
+    return "<img src='assets/panel2.svg' class='storySvg' />"
   } else if(id == 3) {
-    return "three"
-  } else if(id == 4) {
     $(".nextButton").hide();
     nextPossible = false;
-    return "<a onclick='nextPath(5)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(6)'" + ">OPTION 2</a>"
+    return "<a onclick='nextPath(4)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(5)'" + ">OPTION 2</a>"
+  } else if(id == 4) {
+    return "<img src='assets/panel4.svg' class='storySvg' />"
   } else if(id == 5) {
 
-    return "five"
+    return "<img src='assets/panel5.svg' class='storySvg' />"
   } else if(id == 6) {
-    return "six"
+    return "<img src='assets/panel6.svg' class='storySvg' />"
   } else if(id == 7) {
-    return "seven"
+    return "<img src='assets/panel7.svg' class='storySvg' />"
   }
 }
 
@@ -69,7 +69,7 @@ function previousPath() {
     $(".newStory").remove();
     $(".prevStory").remove();
     //alert("remove all")
-
+    currentPath = 0;
   } else {
     let tempPath = prevPath;
     if(prevPath > currentPath) {
