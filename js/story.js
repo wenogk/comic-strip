@@ -21,14 +21,11 @@ $(document).keydown(function(e){
     }
 });
 
-function emptyAllPathsExceptOne(id) {
+function emptyAllPathsExceptOne(id) { //for space optimization
   for(let x=0; x<8; x++) {
-    console.log("empty: " + x);
     if(x!=id) {
-      console.log("x: " + x + " is not id: " + id);
-      $(".path_" + id).remove();
+      $(".path_" + x).remove();
     } else {
-    //alert(".path_" + id)
     }
   }
 }
