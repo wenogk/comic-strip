@@ -61,6 +61,18 @@ function loadPath(id) {
   } else if(id == 3) {
     $(".nextButton").hide();
     nextPossible = false;
+    return `
+    <div class="vertical-center">
+      <div class="optionContainer container">
+        <div onclick='nextPath(4)' class='optionButton row'>
+          Option 1
+        </div>
+        <div onclick='nextPath(5)' class='optionButton row'>
+          Option 2
+        </div>
+      </div>
+    </div>
+    `
     return "<a onclick='nextPath(4)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(5)'" + ">OPTION 2</a>"
   } else if(id == 4) {
     return svgPanel("panel4");
