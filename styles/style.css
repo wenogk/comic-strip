@@ -104,6 +104,7 @@ left: calc(50% - 300px);
   background:blue;
   height:100%;
   width:100%;
+  text-align: center;
 }
 
 .prevStory {
@@ -114,6 +115,7 @@ left: calc(50% - 300px);
   background:green;
   height:100%;
   width:100%;
+  text-align: center;
 }
 
 .storySvg {

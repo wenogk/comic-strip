@@ -20,35 +20,41 @@ $(document).keydown(function(e){
       }
     }
 });
+
 function emptyAllPathsExceptOne(id) {
   for(let x=0; x<8; x++) {
     console.log("empty: " + x);
     if(x!=id) {
       console.log("x: " + x + " is not id: " + id);
       $(".path_" + id).remove();
+    } else {
+    //alert(".path_" + id)
     }
   }
+}
+function svgPanel(file) {
+  return "<object type='image/svg+xml' class='storySvg' data='assets/"+ file + ".svg'></object>";
 }
 function loadPath(id) {
   console.log("loadPath: " + id)
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
-  return "<div class='container'><div class='row'><div class='col-md-4 col-xs-12'><img src='assets/panel1a.svg' class='storySvg' /></div><div class='col-md-4 col-xs-12'><img src='assets/panel1b.svg' class='storySvg' /></div>  <div class='col-md-4 col-xs-12'><img src='assets/panel1c.svg' class='storySvg' /></div></div></div>";
+  return "<div class='container'><div class='row'><div class='col-md-4 col-xs-12'>" + svgPanel("panel1a") + "</div><div class='col-md-4 col-xs-12'>" + svgPanel("panel1b") + "</div>  <div class='col-md-4 col-xs-12'>" + svgPanel("panel1c") + "</div></div></div>";
   } else if(id == 2) {
-    return "<img src='assets/panel2.svg' class='storySvg' />"
+    return svgPanel("panel1a");
   } else if(id == 3) {
     $(".nextButton").hide();
     nextPossible = false;
     return "<a onclick='nextPath(4)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(5)'" + ">OPTION 2</a>"
   } else if(id == 4) {
-    return "<img src='assets/panel4.svg' class='storySvg' />"
+    return svgPanel("panel4");
   } else if(id == 5) {
-    return "<img src='assets/panel5.svg' class='storySvg' />"
+    return svgPanel("panel5");
   } else if(id == 6) {
-    return "<img src='assets/panel6.svg' class='storySvg' />"
+    return svgPanel("panel6");
   } else if(id == 7) {
-    return "<img src='assets/panel7.svg' class='storySvg' />"
+    return svgPanel("panel7");
   }
 }
 
