@@ -1,11 +1,10 @@
 body {
-  background: white;
-  background-image: url(https://i.imgur.com/d47ZIU3.jpg);
+  background: black;
   background-size: cover;
 }
-.languagebutton {
+.languageButton {
   position: absolute;
-  background: #e97b7a;
+  background: #660000;
   top: 50%;
   width: 200px;
   height: 200px;
@@ -17,10 +16,11 @@ body {
   margin-top: -200px;
   margin-left: -100px;
   cursor: pointer;
+  opacity:0;
 }
 
-.languagebutton:hover {
-  background: black;
+.languageButton:hover {
+  background: #8a0303;
 }
 
 .language1 {
