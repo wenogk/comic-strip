@@ -20,6 +20,8 @@ $(document).keydown(function(e){
 
 
 function loadPath(id) {
+  console.log("loadPath: " + id)
+  $(".nextButton").show();
   if(id == 1) {
     return "one"
   } else if(id == 2) {
@@ -31,10 +33,9 @@ function loadPath(id) {
 
     return "<a onclick='nextPath(5)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(6)'" + ">OPTION 2</a>"
   } else if(id == 5) {
-    $(".nextButton").show()
+
     return "five"
   } else if(id == 6) {
-    $(".nextButton").show()
     return "six"
   } else if(id == 7) {
     return "seven"
@@ -55,7 +56,7 @@ function nextPath(id=null) {
     }
     let element = "<div style='background:" + "#"+((1<<24)*Math.random()|0).toString(16) +"' class='path_" + currentPath + " newStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
-    gsap.to(".path_" + currentPath, {duration: 1, left:0}); // after this delete the previous path element
+    gsap.to(".path_" + currentPath, {duration: 1, left:0, ease: "power4.out"}); // after this delete the previous path element
   }
 }
 
@@ -67,12 +68,17 @@ function previousPath() {
 
   } else {
     let tempPath = prevPath;
-    prevPath = currentPath;
-    currentPath = tempPath;
+    if(prevPath > currentPath) {
+      currentPath -=1;
+    } else {
+      prevPath = currentPath;
+      currentPath = tempPath;
+    }
+
   //  alert(currentPath)
     let element = "<div style='background:" + "#"+((1<<24)*Math.random()|0).toString(16) +"' class='path_" + currentPath + " prevStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
-    gsap.to(".path_" + currentPath, {duration: 1, left:0}); // after this delete the previous path element
+    gsap.to(".path_" + currentPath, {duration: 1, left:0, ease: "power4.out"}); // after this delete the previous path element
 
   }
 
