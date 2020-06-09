@@ -20,8 +20,15 @@ $(document).keydown(function(e){
       }
     }
 });
-
-
+function emptyAllPathsExceptOne(id) {
+  for(let x=0; x<8; x++) {
+    console.log("empty: " + x);
+    if(x!=id) {
+      console.log("x: " + x + " is not id: " + id);
+      $(".path_" + id).remove();
+    }
+  }
+}
 function loadPath(id) {
   console.log("loadPath: " + id)
   $(".nextButton").show();
@@ -37,7 +44,6 @@ function loadPath(id) {
   } else if(id == 4) {
     return "<img src='assets/panel4.svg' class='storySvg' />"
   } else if(id == 5) {
-
     return "<img src='assets/panel5.svg' class='storySvg' />"
   } else if(id == 6) {
     return "<img src='assets/panel6.svg' class='storySvg' />"
@@ -47,6 +53,7 @@ function loadPath(id) {
 }
 
 function nextPath(id=null) {
+  emptyAllPathsExceptOne(currentPath);
   if(currentPath==7) {
     box();
     $(".nextButton").hide()
@@ -65,9 +72,8 @@ function nextPath(id=null) {
 }
 
 function previousPath() {
+  emptyAllPathsExceptOne(currentPath);
   if(currentPath<=1) {
-    $(".newStory").remove();
-    $(".prevStory").remove();
     //alert("remove all")
     currentPath = 0;
   } else {
