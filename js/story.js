@@ -1,6 +1,6 @@
 let currentPath = 0;
 let prevPath = 0;
-
+let nextPossible = true;
 $( ".nextButton" ).click(function() {
   nextPath();
 });
@@ -10,11 +10,14 @@ $( ".backButton" ).click(function() {
 });
 
 $(document).keydown(function(e){
+
     if (e.which == 37) {
          previousPath();
     }
     if (e.which == 39) {
-       nextPath();
+      if(nextPossible) {
+         nextPath();
+      }
     }
 });
 
@@ -22,6 +25,7 @@ $(document).keydown(function(e){
 function loadPath(id) {
   console.log("loadPath: " + id)
   $(".nextButton").show();
+  nextPossible = true;
   if(id == 1) {
     return "one"
   } else if(id == 2) {
@@ -29,7 +33,8 @@ function loadPath(id) {
   } else if(id == 3) {
     return "three"
   } else if(id == 4) {
-    $(".nextButton").hide()
+    $(".nextButton").hide();
+    nextPossible = false;
 
     return "<a onclick='nextPath(5)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(6)'" + ">OPTION 2</a>"
   } else if(id == 5) {
