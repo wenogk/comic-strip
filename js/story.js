@@ -27,7 +27,9 @@ function loadPath(id) {
   } else if(id == 3) {
     return "three"
   } else if(id == 4) {
-    return "four"
+    $(".nextButton").hide()
+
+    return "<a onclick='nextPath()'" + ">OPTION 1</a><br />" + "<a onclick='nextPath()'" + ">OPTION 2</a>"
   } else if(id == 5) {
     return "five"
   } else if(id == 6) {
