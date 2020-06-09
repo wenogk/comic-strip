@@ -2,6 +2,7 @@ body {
   background: black;
   background-size: cover;
 }
+html, body {margin: 0; height: 100%; overflow: hidden}
 .firstHeader {
   position: absolute;
   top: 40%;
@@ -57,3 +58,40 @@ left: calc(50% - 300px);
   /* Standard */
   left: calc(50% + 300px);
 }
+
+.boxContainer {
+  z-index: 2;
+  position: absolute;
+  width:10%;
+  min-width: 100px;
+  left:45%;
+  border-radius: 15px;
+  background: white;
+  height:60%;
+  top: -moz-calc(100% - 50px);
+  /* WebKit */
+  top: -webkit-calc(100% - 50px);
+  /* Opera */
+  top: -o-calc(100% - 50px);
+  /* Standard */
+  top: calc(100% - 50px);
+}
+
+.nextButton {
+    width: 46px;
+    height: 46px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    padding:2px;
+}
+.nextButton >img { width: 100%; height: 100%; }
+
+.backButton {
+  width: 46px;
+  height: 46px;
+  top:0;
+  left:0;
+  padding:2px;
+}
+.backButton >img { width: 100%; height: 100%; }
