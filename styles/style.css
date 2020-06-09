@@ -2,6 +2,16 @@ body {
   background: black;
   background-size: cover;
 }
+.firstHeader {
+  position: absolute;
+  top: 40%;
+  width:100%;
+  text-align:center;
+  line-height: 30px;
+  font-size: 100px;
+  color: white;
+  opacity: 0;
+}
 .languageButton {
   position: absolute;
   background: #660000;
