@@ -3,10 +3,27 @@ body {
   background-image: url(https://i.imgur.com/d47ZIU3.jpg);
   background-size: cover;
 }
-
-.language1 {
+.languagebutton {
   position: absolute;
   background: #e97b7a;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  border-radius: 100%;
+  margin-top: -200px;
+  margin-left: -100px;
+  cursor: pointer;
+}
+
+.languagebutton:hover {
+  background: black;
+}
+
+.language1 {
   /* Firefox */
 left: -moz-calc(50% - 300px);
 /* WebKit */
@@ -15,37 +32,13 @@ left: -webkit-calc(50% - 300px);
 left: -o-calc(50% - 300px);
 /* Standard */
 left: calc(50% - 300px);
-  top: 50%;
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  color: white;
-  font-size: 40px;
-  border-radius: 100%;
-  margin-top: -200px;
-  margin-left: -100px;
 }
 
 .language2 {
-  position: absolute;
-  background: #e97b7a;
   left: 50%;
-  top: 50%;
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  color: white;
-  font-size: 40px;
-  border-radius: 100%;
-  margin-top: -200px;
-  margin-left: -100px;
 }
 
 .language3 {
-  position: absolute;
-  background: #e97b7a;
   left: -moz-calc(50% + 300px);
   /* WebKit */
   left: -webkit-calc(50% + 300px);
@@ -53,14 +46,4 @@ left: calc(50% - 300px);
   left: -o-calc(50% + 300px);
   /* Standard */
   left: calc(50% + 300px);
-  top: 50%;
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  color: white;
-  font-size: 40px;
-  border-radius: 100%;
-  margin-top: -200px;
-  margin-left: -100px;
 }
