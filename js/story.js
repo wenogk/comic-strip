@@ -44,6 +44,10 @@ $( ".backButton" ).click(function() {
   previousPath();
 });
 
+$( ".restartButton" ).click(function() {
+  alert("restart");
+});
+
 $(document).keydown(function(e){
 
     if (e.which == 37) {
@@ -101,10 +105,10 @@ function loadPath(id) {
     <div class="vertical-center">
       <div class="optionContainer container">
         <div onclick='nextPath(4)' class='optionButton'>
-          Option 1
+          Ask grandma about it
         </div>
         <div onclick='nextPath(5)' class='optionButton'>
-          Option 2
+          Research on it
         </div>
       </div>
     </div>
@@ -128,7 +132,9 @@ function nextPath(id=null) {
     box();
     $(".nextButton").hide()
     $(".backButton").hide()
+    $(".restartButton").show()
   } else {
+    $(".restartButton").hide()
     backPossible = true;
     prevPath = currentPath;
     if(id==null) {

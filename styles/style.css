@@ -97,6 +97,21 @@ left: calc(50% - 300px);
 .nextButton:hover {
   cursor: pointer;
 }
+
+.restartButton {
+    width: 46px;
+    height: 46px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    padding:2px;
+}
+.restartButton >img { width: 100%; height: 100%; }
+
+.restartButton:hover {
+  cursor: pointer;
+}
+
 .backButton {
   width: 46px;
   height: 46px;
