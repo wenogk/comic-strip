@@ -159,6 +159,7 @@ function loadPath(id, isNewStory = true) {
     </div>
     `
   } else if(id == 8) {
+    boxControlsOnly(1);
     return `
     <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel7")}
