@@ -49,7 +49,7 @@ $( ".backButton" ).click(function() {
 });
 
 $( ".restartButton" ).click(function() {
-  alert("restart");
+  restart();
 });
 
 $(document).keydown(function(e){
@@ -121,8 +121,8 @@ function loadPath(id, isNewStory = true) {
       option1 = "Le pregunto a mi abuela";
       option2 = "Le pregunto a alguien que quiero e investigo sobre el tema"
     } else if (language=="ar") {
-      option1 = "Ask grandma about it";
-      option2 = "I asked a loved one about it and then research on it"
+      option1 = "أسأل جدتي ماذا افعل؟";
+      option2 = "أستفسر من صديقتي و ابحث عن الموضوع عبر الانترنت"
     }
 
     return `
@@ -185,7 +185,6 @@ function nextPath(id=null) {
     $(".backButton").hide()
     $(".restartButton").show()
   } else {
-    $(".restartButton").hide()
     backPossible = true;
     prevPath = currentPath;
     if(prevPath == 5) {
