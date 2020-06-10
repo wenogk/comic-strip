@@ -114,6 +114,7 @@ function loadPath(id, isNewStory = true) {
     `;
   } else if(id == 4) {
     $(".nextButton").hide();
+    boxControlsOnly(1);
     nextPossible = false;
     let option1 = "Ask grandma about it";
     let option2 = "I asked a loved one about it and then research on it"
