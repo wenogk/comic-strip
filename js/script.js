@@ -25,7 +25,7 @@ gsap.to(".firstHeader", {duration: 3, opacity:1});
 }, 1000);
 
 setTimeout(() => {
-gsap.to(".firstHeader", {duration: 2, opacity:0});
+gsap.to(".firstHeader", {duration: 1, scale: 0.5, top: 0, opacity:1});
 }, 4000);
 
 setTimeout(() => {

@@ -119,10 +119,10 @@ function loadPath(id, isNewStory = true) {
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       <div class="vertical-center">
         <div class="optionContainer container">
-          <div onclick='nextPath(4)' class='optionButton'>
+          <div onclick='nextPath(5)' class='optionButton'>
             Ask grandma about it
           </div>
-          <div onclick='nextPath(5)' class='optionButton'>
+          <div onclick='nextPath(6)' class='optionButton'>
             I asked a loved one about it and then research on it
         </div>
       </div>
