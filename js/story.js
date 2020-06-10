@@ -2,8 +2,10 @@ let currentPath = 0;
 let prevPath = 0;
 let nextPossible = false;
 let backPossible = false;
+let language = "en"
 
 $( ".language1" ).click(function() {
+  language = "en"
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
@@ -15,6 +17,7 @@ $( ".language1" ).click(function() {
 });
 
 $( ".language2" ).click(function() {
+  language = "es"
   gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
@@ -26,6 +29,7 @@ $( ".language2" ).click(function() {
 });
 
 $( ".language3" ).click(function() {
+  language = "ar"
   gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
@@ -72,7 +76,7 @@ function emptyAllPathsExceptOne(id) { //for space optimization
 }
 function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
-  return `<object type='image/svg+xml' class='${classVal}' data='assets/${file}.svg'></object>`;
+  return `<object type='image/svg+xml' class='${classVal}' data='assets/${language}/${file}.svg'></object>`;
 }
 function loadPath(id, isNewStory = true) {
   console.log("loadPath: " + id)
@@ -81,68 +85,74 @@ function loadPath(id, isNewStory = true) {
   if(id == 1) {
   return `
   <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-    <div class="vertical-center">
-      <div class='container three-col-panel'>
-        <div class='row'>
-          <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}a'>
-            ${svgPanel("panel1a", true)}
-           </div>
-           <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}b'>
-            ${svgPanel("panel1b", true)}
-            </div>
-            <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}c'>
-             ${svgPanel("panel1c", true)}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    ${svgPanel("panel1a")}
+  </div>
     `;
   } else if(id == 2) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel2")}
-    </div>
+      <div class="vertical-center">
+        <div class='container three-col-panel'>
+          <div class='row'>
+             <div class='col-md-6 col-xs-12 imgColumn vertical-center path_${id}b'>
+              ${svgPanel("panel1b", true)}
+              </div>
+              <div class='col-md-6 col-xs-12 imgColumn vertical-center path_${id}c'>
+               ${svgPanel("panel1c", true)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `
   } else if(id == 3) {
+    return `
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel2")}
+    </div>
+
+    `;
+  } else if(id == 4) {
     $(".nextButton").hide();
     nextPossible = false;
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       <div class="vertical-center">
         <div class="optionContainer container">
+<<<<<<< HEAD
           <div onclick='nextPath(4)' class='optionButton'>
             1st Option: Ask grandma about it
           </div>
           <div onclick='nextPath(5)' class='optionButton'>
             2nd option: I asked a loved one about it and then research on it
+=======
+          <div onclick='nextPath(5)' class='optionButton'>
+            Ask grandma about it
+          </div>
+          <div onclick='nextPath(6)' class='optionButton'>
+            Research on it
+>>>>>>> f07b1cdefce0169e34388379c0b66a73e6c39ef3
           </div>
         </div>
       </div>
-    </div>
-    `;
-  } else if(id == 4) {
-    return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel3")}
     </div>
     `
   } else if(id == 5) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel4")}
+      ${svgPanel("panel3")}
     </div>
     `
   } else if(id == 6) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel5")}
+      ${svgPanel("panel4")}
     </div>
     `
   } else if(id == 7) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel6")}
+      ${svgPanel("panel7")}
     </div>
     `
   }
@@ -160,11 +170,14 @@ function nextPath(id=null) {
     $(".restartButton").hide()
     backPossible = true;
     prevPath = currentPath;
-    if(id==null) {
+    if(prevPath == 5) {
+      currentPath = 7;
+    } else if(id==null) {
       currentPath+=1;
     } else {
       currentPath = id
     }
+
     let element = loadPath(currentPath);
     $("body").append(element);
     gsap.to(".path_" + prevPath, {duration: 3, x:"-200%", ease: "power4.out"}); // after this delete the previous path element
