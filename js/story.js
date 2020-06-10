@@ -5,16 +5,20 @@ let backPossible = true;
 
 $( ".language1" ).click(function() {
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-30px", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
+  boxControlsOnly();
+  nextPath();
 });
 
 $( ".language2" ).click(function() {
   gsap.timeline({}).to(".language2", {duration: 0.25, y: "-30px", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
-
+  boxControlsOnly();
+  nextPath();
 });
 
 $( ".language3" ).click(function() {
   gsap.timeline({}).to(".language3", {duration: 0.25, y: "-30px", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
-
+  boxControlsOnly();
+  nextPath();
 });
 
 $( ".nextButton" ).click(function() {
