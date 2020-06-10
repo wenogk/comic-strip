@@ -158,20 +158,12 @@ left: calc(50% - 300px);
 }
 
 .storySvg {
-  border: solid 2px black;
+  border: solid 4px black;
   margin-top:50px;
   height:80%;
   width:auto;
 }
 
-<<<<<<< HEAD
-.titleSvg {
-  margin-top:50px;
-  height:80%;
-  width:auto;
-  margin:auto;
-  position:relative;
-}
 .fixedlogo {
   margin-top:3%;
   height:5%;
@@ -182,9 +174,9 @@ left: calc(50% - 300px);
 }
 
 .storySvgCols {
-  border: solid 2px black;
+  border: solid 4px black;
   height:auto;
-  width:100%;
+  width:80%;
 }
 
 .imgColumn {
