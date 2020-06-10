@@ -75,7 +75,10 @@ function emptyAllPathsExceptOne(id) { //for space optimization
 }
 function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
-  return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
+  let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage";
+  //return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
+  return `<div class='${classVal} objectHolder'><img class="${storySvgImage}" src='assets/${language}/${file}.svg' /></div>`;
+
 }
 function loadPath(id, isNewStory = true) {
   console.log("loadPath: " + id)
@@ -302,6 +305,7 @@ Hecho por Pamela Martinez, Saad Teeti, and Romeno Wenogk Fernando.
   boxState = "box"
   gsap.timeline()
   .to(".aboutformat", {duration:0,opacity:0})
-  .to(".boxContainer", {duration: s, display: "block", opacity:1, top:50, width:"70%", left:"15%"})
+  .to(".path_8 > div > img", {duration:0.3,opacity:0})
+  .to(".boxContainer", {duration: s, display: "block", opacity:1, top:"5%", width:"70%", left:"15%"})
   .to(".aboutformat", {duration:0.5,opacity:1});
 }
