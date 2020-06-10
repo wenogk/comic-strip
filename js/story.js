@@ -63,17 +63,32 @@ function emptyAllPathsExceptOne(id) { //for space optimization
     }
   }
 }
-function svgPanel(file) {
-  return "<object type='image/svg+xml' class='storySvg' data='assets/"+ file + ".svg'></object>";
+function svgPanel(file, isCols = false) {
+  let classVal = isCols ? "storySvgCols" : "storySvg";
+  return `<object type='image/svg+xml' class='${classVal}' data='assets/${file}.svg'></object>`;
 }
 function loadPath(id) {
   console.log("loadPath: " + id)
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
-  return "<div class='container'><div class='row'><div class='col-md-4 col-xs-12 imgColumn'>" + svgPanel("panel1a") + "</div><div class='col-md-4 col-xs-12 imgColumn'>" + svgPanel("panel1b") + "</div>  <div class='col-md-4 col-xs-12 imgColumn'>" + svgPanel("panel1c") + "</div></div></div>";
+  return `
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-4 col-xs-12 imgColumn'>
+        ${svgPanel("panel1a", true)}
+       </div>
+       <div class='col-md-4 col-xs-12 imgColumn'>
+        ${svgPanel("panel1b", true)}
+        </div>
+        <div class='col-md-4 col-xs-12 imgColumn'>
+         ${svgPanel("panel1c", true)}
+        </div>
+      </div>
+    </div>
+    `;
   } else if(id == 2) {
-    return svgPanel("panel1a");
+    return svgPanel("panel2");
   } else if(id == 3) {
     $(".nextButton").hide();
     nextPossible = false;

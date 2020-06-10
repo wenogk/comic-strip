@@ -136,6 +136,11 @@ left: calc(50% - 300px);
   width:auto;
 }
 
+.storySvgCols {
+  height:auto;
+  width:80%;
+}
+
 .imgColumn {
   height:80vh;
 
