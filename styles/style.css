@@ -24,7 +24,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   color: white;
   font-size: 40px;
   transform: rotate(-45deg);
-  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%; /* droplet shape css https://stackoverflow.com/a/30711303 */
   margin-top: -200px;
   margin-left: -100px;
   cursor: pointer;
@@ -148,6 +148,12 @@ left: calc(50% - 300px);
 
 .storySvg {
   border: solid 2px black;
+  margin-top:50px;
+  height:80%;
+  width:auto;
+}
+
+.titleSvg {
   margin-top:50px;
   height:80%;
   width:auto;
