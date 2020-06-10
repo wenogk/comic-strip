@@ -10,6 +10,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   width: 50%;
   left: 25%;
   top: 5%;
+
 }
 .firstHeader {
   margin-left: auto;
@@ -162,7 +163,6 @@ left: calc(50% - 300px);
   width:auto;
 }
 
-
 .fixedlogo {
   margin-top:3%;
   height:5%;
@@ -176,7 +176,6 @@ left: calc(50% - 300px);
   border: solid 4px black;
   height:auto;
   width:80%;
-  cursor: alias;
 }
 
 .imgColumn {
@@ -222,7 +221,4 @@ left: calc(50% - 300px);
 
 .objectHolder {
   background: white;
-}
-.alias {
-  cursor:alias;
 }

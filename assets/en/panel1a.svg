@@ -2,14 +2,20 @@
 <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1280 1024" style="enable-background:new 0 0 1280 1024;" xml:space="preserve">
-<style type="text/css">
+<style type="text/css" cursor="pointer" pointer-events="all">
 	.st0{display:none;}
 	.st1{fill:#FFFFFF;}
 	.st2{fill:#202020;}
 	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+
+	.st2:hover {
+	fill: red;
+	stroke: red;
+	}
+
 </style>
 <g id="Layer_1" class="st0">
-	
+
 		<image style="display:inline;overflow:visible;" width="2224" height="1668" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QDERXhpZgAATU0AKgAAAAgAAgEyAAIAAAAUAAAAJodpAAQA
 AAABAAAAOgAAAAAyMDIwOjA2OjA2IDIxOjAwOjI4AAAHkAMAAgAAABQAAACUkAQAAgAAABQAAACo
 kpEAAgAAAAQ5OTQAkpIAAgAAAAQ5OTQAoAEAAwAAAAH//wAAoAIABAAAAAEAAAiwoAMABAAAAAEA
@@ -7457,7 +7463,7 @@ KACiiigAooooAKKKKACiiigD/9k=" transform="matrix(0.5755 0 0 0.6139 0 0)">
 </g>
 <g id="Sounds">
 	<g>
-		<polygon class="st1" points="1092.38,218.4 1077.55,280.21 1094.08,283.41 1091.77,251.05 1103.87,259.43 1115.58,246.18 
+		<polygon class="st1" points="1092.38,218.4 1077.55,280.21 1094.08,283.41 1091.77,251.05 1103.87,259.43 1115.58,246.18
 			1105.09,285.55 1121.16,285.21 1134.23,211.84 1104.84,233.75 		"/>
 		<g>
 			<g>
@@ -8816,7 +8822,7 @@ KACiiigAooooAKKKKACiiigD/9k=" transform="matrix(0.5755 0 0 0.6139 0 0)">
 		</g>
 	</g>
 	<g>
-		<polygon class="st1" points="1018.35,212.7 1026.46,285.3 1047.34,281.94 1031.18,248.08 1048.97,252.12 1057.33,233.04 
+		<polygon class="st1" points="1018.35,212.7 1026.46,285.3 1047.34,281.94 1031.18,248.08 1048.97,252.12 1057.33,233.04
 			1061.27,279.7 1080.14,272.72 1065.15,188.42 1039.46,224.09 		"/>
 		<g>
 			<g>
@@ -9022,7 +9028,7 @@ KACiiigAooooAKKKKACiiigD/9k=" transform="matrix(0.5755 0 0 0.6139 0 0)">
 		</g>
 	</g>
 	<g>
-		<polygon class="st1" points="955.39,219.5 951,294.5 977.35,294.5 964.17,257.5 985.25,264.5 999.3,246.5 994.91,294.5 
+		<polygon class="st1" points="955.39,219.5 951,294.5 977.35,294.5 964.17,257.5 985.25,264.5 999.3,246.5 994.91,294.5
 			1019.5,290.5 1017.74,202.5 979.1,234.5 		"/>
 		<g>
 			<g>
@@ -9225,7 +9231,7 @@ KACiiigAooooAKKKKACiiigD/9k=" transform="matrix(0.5755 0 0 0.6139 0 0)">
 		</g>
 	</g>
 	<g>
-		<polygon class="st1" points="1092.38,218.4 1077.55,280.21 1094.08,283.41 1091.77,251.05 1103.87,259.43 1115.58,246.18 
+		<polygon class="st1" points="1092.38,218.4 1077.55,280.21 1094.08,283.41 1091.77,251.05 1103.87,259.43 1115.58,246.18
 			1105.09,285.55 1121.16,285.21 1134.23,211.84 1104.84,233.75 		"/>
 		<g>
 			<g>
@@ -9426,7 +9432,7 @@ KACiiigAooooAKKKKACiiigD/9k=" transform="matrix(0.5755 0 0 0.6139 0 0)">
 		</g>
 	</g>
 	<g>
-		<polygon class="st1" points="1168.3,272.1 1157.55,312.21 1174.78,315.55 1170.05,293.82 1183.1,300.28 1194.17,292.3 
+		<polygon class="st1" points="1168.3,272.1 1157.55,312.21 1174.78,315.55 1170.05,293.82 1183.1,300.28 1194.17,292.3
 			1186.26,317.77 1202.76,318.72 1210.85,270.78 1182.23,283.24 		"/>
 		<g>
 			<g>
@@ -9624,7 +9630,7 @@ KACiiigAooooAKKKKACiiigD/9k=" transform="matrix(0.5755 0 0 0.6139 0 0)">
 		</g>
 	</g>
 	<g>
-		<polygon class="st1" points="1135.49,243.84 1123.55,293.21 1137.25,295.87 1135.16,269.96 1145.22,276.73 1154.84,266.19 
+		<polygon class="st1" points="1135.49,243.84 1123.55,293.21 1137.25,295.87 1135.16,269.96 1145.22,276.73 1154.84,266.19
 			1146.38,297.63 1159.68,297.45 1170.09,238.82 1145.88,256.19 		"/>
 		<g>
 			<g>
@@ -11541,7 +11547,7 @@ KACiiigAooooAKKKKACiiigD/9k=" transform="matrix(0.5755 0 0 0.6139 0 0)">
 		</g>
 	</g>
 	<g>
-		<polygon class="st1" points="259.5,614.5 268.5,609.5 278.5,628.5 283.5,625.5 273.5,603.5 287.5,598.5 313.5,670.5 300.5,673.5 
+		<polygon class="st1" points="259.5,614.5 268.5,609.5 278.5,628.5 283.5,625.5 273.5,603.5 287.5,598.5 313.5,670.5 300.5,673.5
 			291.5,647.5 284.5,652.5 293.5,676.5 286.5,678.5 		"/>
 		<g>
 			<g>
