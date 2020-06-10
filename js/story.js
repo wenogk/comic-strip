@@ -84,13 +84,13 @@ function loadPath(id, isNewStory = true) {
     <div class="vertical-center">
       <div class='container three-col-panel'>
         <div class='row'>
-          <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+          <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}a'>
             ${svgPanel("panel1a", true)}
            </div>
-           <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+           <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}b'>
             ${svgPanel("panel1b", true)}
             </div>
-            <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+            <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}c'>
              ${svgPanel("panel1c", true)}
             </div>
           </div>
