@@ -11,6 +11,7 @@ $("body").on('mouseenter', '.path_1 > object', function(){
 $("body").on('mouseout', '.path_1 > object', function(){
   ouchaudio.pause();
   ouchaudio.currentTime = 0;
+
 });
 $("body").on('mouseenter', '.path_2b > object', function(){
   dropaudio.play();
@@ -28,13 +29,6 @@ $("body").on('mouseout', '.path_2c > object', function(){
   panicaudio.currentTime = 0;
 });
 
-$("body").on('mouseenter', '.path_2b > object', function(){
-  panicaudio.play();
-});
-$("body").on('mouseout', '.path_2b > object', function(){
-  panicaudio.pause();
-  panicaudio.currentTime = 0;
-});
 
 $("body").on('mouseenter', '.path_3 > object', function(){
   dropaudio.play();
