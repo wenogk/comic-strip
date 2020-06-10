@@ -74,54 +74,77 @@ function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
   return `<object type='image/svg+xml' class='${classVal}' data='assets/${file}.svg'></object>`;
 }
-function loadPath(id) {
+function loadPath(id, isNewStory = true) {
   console.log("loadPath: " + id)
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
   return `
-  <div class="vertical-center">
-    <div class='container three-col-panel'>
-      <div class='row'>
-        <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
-          ${svgPanel("panel1a", true)}
-         </div>
-         <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
-          ${svgPanel("panel1b", true)}
-          </div>
+  <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div class="vertical-center">
+      <div class='container three-col-panel'>
+        <div class='row'>
           <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
-           ${svgPanel("panel1c", true)}
+            ${svgPanel("panel1a", true)}
+           </div>
+           <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+            ${svgPanel("panel1b", true)}
+            </div>
+            <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+             ${svgPanel("panel1c", true)}
+            </div>
           </div>
         </div>
       </div>
     </div>
     `;
   } else if(id == 2) {
-    return svgPanel("panel2");
+    return `
+    <div style="background:#B53D32;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel2")}
+    </div>
+    `
   } else if(id == 3) {
     $(".nextButton").hide();
     nextPossible = false;
     return `
-    <div class="vertical-center">
-      <div class="optionContainer container">
-        <div onclick='nextPath(4)' class='optionButton'>
-          Ask grandma about it
-        </div>
-        <div onclick='nextPath(5)' class='optionButton'>
-          Research on it
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      <div class="vertical-center">
+        <div class="optionContainer container">
+          <div onclick='nextPath(4)' class='optionButton'>
+            Ask grandma about it
+          </div>
+          <div onclick='nextPath(5)' class='optionButton'>
+            Research on it
+          </div>
         </div>
       </div>
     </div>
-    `
-    return "<a onclick='nextPath(4)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(5)'" + ">OPTION 2</a>"
+    `;
   } else if(id == 4) {
-    return svgPanel("panel3");
+    return `
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel3")}
+    </div>
+    `
   } else if(id == 5) {
-    return svgPanel("panel4");
+    return `
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel4")}
+    </div>
+    `
   } else if(id == 6) {
-    return svgPanel("panel5");
+    return `
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel5")}
+    </div>
+    `
   } else if(id == 7) {
-    return svgPanel("panel6");
+    return `
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel6")}
+    </div>
+    `
   }
 }
 
@@ -142,7 +165,7 @@ function nextPath(id=null) {
     } else {
       currentPath = id
     }
-    let element = "<div style='background:white;' class='path_" + currentPath + " newStory' >" + loadPath(currentPath)  + "</div>"
+    let element = loadPath(currentPath);
     $("body").append(element);
     gsap.to(".path_" + prevPath, {duration: 3, x:"-200%", ease: "power4.out"}); // after this delete the previous path element
 
@@ -169,7 +192,7 @@ function previousPath() {
     }
 
   //  alert(currentPath)
-    let element = "<div style='background:white;' class='path_" + currentPath + " prevStory' >" + loadPath(currentPath)  + "</div>"
+    let element = loadPath(currentPath, false);
     $("body").append(element);
     gsap.to(".path_" + prevPath, {duration: 1, x:"100%", ease: "power4.out"});
     gsap.to(".path_" + currentPath, {duration: 1, x:"200%", ease: "power4.out"}); // after this delete the previous path element
