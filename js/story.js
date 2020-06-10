@@ -143,15 +143,22 @@ function loadPath(id, isNewStory = true) {
   } else if(id == 7) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel5")}
+    </div>
+    `
+  } else if(id == 8) {
+    return `
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel7")}
     </div>
     `
   }
+
 }
 
 function nextPath(id=null) {
   emptyAllPathsExceptOne(currentPath);
-  if(currentPath==7) {
+  if(currentPath==8) {
     backPossible = false;
     box();
     $(".nextButton").hide()
