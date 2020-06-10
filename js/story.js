@@ -81,68 +81,66 @@ function loadPath(id, isNewStory = true) {
   if(id == 1) {
   return `
   <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-    <div class="vertical-center">
-      <div class='container three-col-panel'>
-        <div class='row'>
-          <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}a'>
-            ${svgPanel("panel1a", true)}
-           </div>
-           <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}b'>
-            ${svgPanel("panel1b", true)}
-            </div>
-            <div class='col-md-4 col-xs-12 imgColumn vertical-center path_${id}c'>
-             ${svgPanel("panel1c", true)}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    ${svgPanel("panel1a")}
+  </div>
     `;
   } else if(id == 2) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel2")}
-    </div>
+      <div class="vertical-center">
+        <div class='container three-col-panel'>
+          <div class='row'>
+             <div class='col-md-6 col-xs-12 imgColumn vertical-center path_${id}b'>
+              ${svgPanel("panel1b", true)}
+              </div>
+              <div class='col-md-6 col-xs-12 imgColumn vertical-center path_${id}c'>
+               ${svgPanel("panel1c", true)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `
   } else if(id == 3) {
+    return `
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+      ${svgPanel("panel2")}
+    </div>
+
+    `;
+  } else if(id == 4) {
     $(".nextButton").hide();
     nextPossible = false;
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       <div class="vertical-center">
         <div class="optionContainer container">
-          <div onclick='nextPath(4)' class='optionButton'>
+          <div onclick='nextPath(5)' class='optionButton'>
             Ask grandma about it
           </div>
-          <div onclick='nextPath(5)' class='optionButton'>
+          <div onclick='nextPath(6)' class='optionButton'>
             Research on it
           </div>
         </div>
       </div>
     </div>
-    `;
-  } else if(id == 4) {
+    `
+  } else if(id == 5) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel3")}
     </div>
     `
-  } else if(id == 5) {
+  } else if(id == 6) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel4")}
     </div>
     `
-  } else if(id == 6) {
-    return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel5")}
-    </div>
-    `
   } else if(id == 7) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel6")}
+      ${svgPanel("panel7")}
     </div>
     `
   }
@@ -160,11 +158,14 @@ function nextPath(id=null) {
     $(".restartButton").hide()
     backPossible = true;
     prevPath = currentPath;
-    if(id==null) {
+    if(prevPath == 5) {
+      currentPath = 7;
+    } else if(id==null) {
       currentPath+=1;
     } else {
       currentPath = id
     }
+
     let element = loadPath(currentPath);
     $("body").append(element);
     gsap.to(".path_" + prevPath, {duration: 3, x:"-200%", ease: "power4.out"}); // after this delete the previous path element
