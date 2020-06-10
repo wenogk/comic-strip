@@ -76,7 +76,7 @@ function emptyAllPathsExceptOne(id) { //for space optimization
 }
 function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
-  return `<object type='image/svg+xml' class='${classVal}' data='assets/${language}/${file}.svg'></object>`;
+  return `<object type='image/svg+xml' class='${classVal} objectHolder' data='assets/${language}/${file}.svg'></object>`;
 }
 function loadPath(id, isNewStory = true) {
   console.log("loadPath: " + id)
@@ -84,13 +84,13 @@ function loadPath(id, isNewStory = true) {
   nextPossible = true;
   if(id == 1) {
   return `
-  <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+  <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
     ${svgPanel("panel1a")}
   </div>
     `;
   } else if(id == 2) {
     return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       <div class="vertical-center">
         <div class='container three-col-panel'>
           <div class='row'>
@@ -107,7 +107,7 @@ function loadPath(id, isNewStory = true) {
     `
   } else if(id == 3) {
     return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel2")}
     </div>
 
@@ -130,25 +130,25 @@ function loadPath(id, isNewStory = true) {
     `
   } else if(id == 5) {
     return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel3")}
     </div>
     `
   } else if(id == 6) {
     return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel4")}
     </div>
     `
   } else if(id == 7) {
     return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel5")}
     </div>
     `
   } else if(id == 8) {
     return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel7")}
     </div>
     `
