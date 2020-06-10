@@ -73,16 +73,18 @@ function loadPath(id) {
   nextPossible = true;
   if(id == 1) {
   return `
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-4 col-xs-12 imgColumn'>
-        ${svgPanel("panel1a", true)}
-       </div>
-       <div class='col-md-4 col-xs-12 imgColumn'>
-        ${svgPanel("panel1b", true)}
-        </div>
-        <div class='col-md-4 col-xs-12 imgColumn'>
-         ${svgPanel("panel1c", true)}
+  <div class="vertical-center">
+    <div class='container three-col-panel'>
+      <div class='row'>
+        <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+          ${svgPanel("panel1a", true)}
+         </div>
+         <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+          ${svgPanel("panel1b", true)}
+          </div>
+          <div class='col-md-4 col-xs-12 imgColumn vertical-center'>
+           ${svgPanel("panel1c", true)}
+          </div>
         </div>
       </div>
     </div>

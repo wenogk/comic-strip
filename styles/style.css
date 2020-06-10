@@ -132,20 +132,24 @@ left: calc(50% - 300px);
 }
 
 .storySvg {
+  margin-top:50px;
   height:80%;
   width:auto;
 }
 
 .storySvgCols {
   height:auto;
-  width:80%;
+  width:100%;
 }
 
 .imgColumn {
   height:80vh;
 
 }
-
+.three-col-panel {
+  width:100%;
+  height:100%;
+}
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
@@ -162,7 +166,6 @@ left: calc(50% - 300px);
   font-size: 35px;
   background: #660000;
   border-radius: 15px;
-  width:100%;
   height:100px;
   line-height: 100px;
   margin-bottom:50px;
