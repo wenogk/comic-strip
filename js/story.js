@@ -91,12 +91,6 @@ function loadPath(id, isNewStory = true) {
   } else if(id == 2) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel("panel1b",false)}
-    </div>
-
-    `;
-    /*return `
-    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       <div class="vertical-center">
         <div class='container three-col-panel'>
           <div class='row'>
@@ -110,7 +104,7 @@ function loadPath(id, isNewStory = true) {
           </div>
         </div>
       </div>
-    `*/
+    `
   } else if(id == 3) {
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
