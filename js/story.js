@@ -135,9 +135,9 @@ function nextPath(id=null) {
     }
     let element = "<div style='background:white;' class='path_" + currentPath + " newStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
-    gsap.to(".path_" + prevPath, {duration: 3, left:"-100%", ease: "power4.out"}); // after this delete the previous path element
+    gsap.to(".path_" + prevPath, {duration: 3, x:"-200%", ease: "power4.out"}); // after this delete the previous path element
 
-    gsap.to(".path_" + currentPath, {duration: 3, left:0, ease: "power4.out"}); // after this delete the previous path element
+    gsap.to(".path_" + currentPath, {duration: 3, x:"-100%", ease: "power4.out"}); // after this delete the previous path element
   }
 }
 
@@ -162,8 +162,8 @@ function previousPath() {
   //  alert(currentPath)
     let element = "<div style='background:white;' class='path_" + currentPath + " prevStory' >" + loadPath(currentPath)  + "</div>"
     $("body").append(element);
-    gsap.to(".path_" + prevPath, {duration: 3, left:"100%", ease: "power4.out"});
-    gsap.to(".path_" + currentPath, {duration: 3, left:0, ease: "power4.out"}); // after this delete the previous path element
+    gsap.to(".path_" + prevPath, {duration: 1, x:"100%", ease: "power4.out"});
+    gsap.to(".path_" + currentPath, {duration: 1, x:"200%", ease: "power4.out"}); // after this delete the previous path element
 
   }
 
