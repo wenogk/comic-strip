@@ -94,6 +94,9 @@ left: calc(50% - 300px);
 }
 .nextButton >img { width: 100%; height: 100%; }
 
+.nextButton:hover {
+  cursor: pointer;
+}
 .backButton {
   width: 46px;
   height: 46px;
@@ -103,6 +106,9 @@ left: calc(50% - 300px);
 }
 .backButton >img { width: 100%; height: 100%; }
 
+.backButton:hover {
+  cursor: pointer;
+}
 .newStory {
   position: absolute;
   top:0;
@@ -150,6 +156,7 @@ left: calc(50% - 300px);
   color:white;
   font-size: 35px;
   background: #660000;
+  border-radius: 15px;
   width:100%;
   height:100px;
   line-height: 100px;
@@ -160,4 +167,5 @@ left: calc(50% - 300px);
   background: #8a0303;
   width:100%;
   height:100px;
+  cursor: pointer;
 }

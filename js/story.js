@@ -80,10 +80,10 @@ function loadPath(id) {
     return `
     <div class="vertical-center">
       <div class="optionContainer container">
-        <div onclick='nextPath(4)' class='optionButton row'>
+        <div onclick='nextPath(4)' class='optionButton'>
           Option 1
         </div>
-        <div onclick='nextPath(5)' class='optionButton row'>
+        <div onclick='nextPath(5)' class='optionButton'>
           Option 2
         </div>
       </div>
