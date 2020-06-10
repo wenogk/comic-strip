@@ -6,16 +6,16 @@ $( window ).resize(function() {
   console.log(boxState)
   switch(boxState) {
     case "boxFullyHide":
-      boxFullyHide();
+      boxFullyHide(0.5);
       break;
     case "boxControlsOnly":
-      boxControlsOnly();
+      boxControlsOnly(0.5);
       break;
     case "box":
-      box();
+      box(0.5);
       break;
     default:
-      boxFullyHide();
+      boxFullyHide(0.5);
       break;
   }
 });
@@ -40,23 +40,26 @@ function getLanguageDropsBackToFirstState() {
   gsap.to(".language3", {duration: 1, top: "48%", opacity:1});
 }
 
-function boxFullyHide() {
+function boxFullyHide(s = 2) {
   boxState = "boxFullyHide";
   let h = window.innerHeight - 50;
-  gsap.to(".boxContainer", {duration: 2, display: "none", opacity:0, top:h, width:"50%", left:"25%"});
+  gsap.to(".boxContainer", {duration: s, display: "none", opacity:0, top:h, width:"50%", left:"25%"});
 }
 
-function boxControlsOnly() {
+function boxControlsOnly(s=2) {
   boxState = "boxControlsOnly"
   let h = window.innerHeight - 50;
-  gsap.to(".boxContainer", {duration: 2, display: "block", opacity:1, top:h, width:"10%", left:"45%"});
+  gsap.to(".boxContainer", {duration: s, display: "block", opacity:1, top:h, width:"10%", left:"45%"});
 }
 
-function box() {
+function box(s=1.5) {
   boxState = "box"
-  gsap.to(".boxContainer", {duration: 2, display: "block", opacity:1, top:100, width:"60%", left:"20%"});
+  gsap.timeline()
+  .to(".aboutformat", {duration:0,opacity:0})
+  .to(".boxContainer", {duration: s, display: "block", opacity:1, top:100, width:"60%", left:"20%"})
+  .to(".aboutformat", {duration:0.5,opacity:1});
 }
 
-function boxBack() {
-  gsap.to(".boxContainer", {duration: 2, display:"block", opacity:1, top:100, width:"60%", left:"20%"});
+function boxBack(s=2) {
+  gsap.to(".boxContainer", {duration: s, display:"block", opacity:1, top:100, width:"60%", left:"20%"});
 }
