@@ -177,6 +177,7 @@ function restart() {
   backPossible = false;
 }
 function nextPath(id=null) {
+  boxFullyHide(1);
   emptyAllPathsExceptOne(currentPath);
   if(currentPath==8) {
     backPossible = false;
@@ -203,6 +204,7 @@ function nextPath(id=null) {
 }
 
 function previousPath() {
+
   emptyAllPathsExceptOne(currentPath);
   if(currentPath<=1) {
     boxFullyHide();
