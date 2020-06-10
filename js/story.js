@@ -179,7 +179,6 @@ function nextPath(id=null) {
     let element = loadPath(currentPath);
     $("body").append(element);
     gsap.to(".path_" + prevPath, {duration: 3, x:"-200%", ease: "power4.out"}); // after this delete the previous path element
-
     gsap.to(".path_" + currentPath, {duration: 3, x:"-100%", ease: "power4.out"}); // after this delete the previous path element
   }
 }
