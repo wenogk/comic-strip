@@ -1,13 +1,15 @@
 let currentPath = 0;
 let prevPath = 0;
-let nextPossible = true;
-let backPossible = true;
+let nextPossible = false;
+let backPossible = false;
 
 $( ".language1" ).click(function() {
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
   setTimeout(() => {
     boxControlsOnly();
     nextPath();
+    nextPossible = true;
+    backPossible = true;
   }, 2000);
 });
 
@@ -16,6 +18,8 @@ $( ".language2" ).click(function() {
   setTimeout(() => {
     boxControlsOnly();
     nextPath();
+    nextPossible = true;
+    backPossible = true;
   }, 2000);
 });
 
@@ -24,6 +28,8 @@ $( ".language3" ).click(function() {
   setTimeout(() => {
     boxControlsOnly();
     nextPath();
+    nextPossible = true;
+    backPossible = true;
   }, 2000);
 });
 
@@ -125,6 +131,8 @@ function previousPath() {
     getLanguageDropsBackToFirstState();
     gsap.to(".path_" + currentPath, {duration: 3, scale:"0.5", left: "-100%", ease: "power4.out"});
     currentPath = 0;
+    nextPossible = false;
+    backPossible = false;
   } else {
     let tempPath = prevPath;
     if(prevPath > currentPath) {
