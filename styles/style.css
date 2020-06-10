@@ -160,6 +160,7 @@ left: calc(50% - 300px);
   margin-top:50px;
   height:80%;
   width:auto;
+  cursor: alias;
 }
 
 .fixedlogo {
@@ -175,6 +176,7 @@ left: calc(50% - 300px);
   border: solid 4px black;
   height:auto;
   width:80%;
+  cursor: alias;
 }
 
 .imgColumn {
