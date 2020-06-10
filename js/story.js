@@ -75,7 +75,7 @@ function emptyAllPathsExceptOne(id) { //for space optimization
 }
 function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
-  return `<object type='image/svg+xml' class='${classVal} objectHolder' data='assets/${language}/${file}.svg'></object>`;
+  return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
 }
 function loadPath(id, isNewStory = true) {
   console.log("loadPath: " + id)

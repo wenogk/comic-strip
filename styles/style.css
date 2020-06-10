@@ -162,9 +162,6 @@ left: calc(50% - 300px);
   width:auto;
 }
 
-.storySvg:hover {
-  cursor: alias;
-}
 
 .fixedlogo {
   margin-top:3%;
@@ -179,8 +176,6 @@ left: calc(50% - 300px);
   border: solid 4px black;
   height:auto;
   width:80%;
-}
-.storySvgCols:hover {
   cursor: alias;
 }
 
@@ -227,4 +222,7 @@ left: calc(50% - 300px);
 
 .objectHolder {
   background: white;
+}
+.alias {
+  cursor:alias;
 }
