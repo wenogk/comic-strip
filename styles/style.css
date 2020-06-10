@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: white;
   background-size: cover;
 }
 html, body {margin: 0; height: 100%; overflow: hidden}
@@ -10,7 +10,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   text-align:center;
   line-height: 30px;
   font-size: 100px;
-  color: white;
+  color: black;
   opacity: 0;
 }
 .languageButton {
