@@ -116,12 +116,12 @@ function loadPath(id, isNewStory = true) {
     boxControlsOnly(1);
     nextPossible = false;
     let option1 = "Ask grandma about it";
-    let option2 = "I asked a loved one about it and then research on it"
+    let option2 = "Ask a loved one about it and then research on it"
     if(language=="es") {
       option1 = "Le pregunto a mi abuela";
       option2 = "Le pregunto a alguien que quiero e investigo sobre el tema"
     } else if (language=="ar") {
-      option1 = "أسأل جدتي ماذا افعل؟";
+      option1 = "اسأل جدتي ماذا افعل";
       option2 = "أستفسر من صديقتي و ابحث عن الموضوع عبر الانترنت"
     }
 
