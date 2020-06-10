@@ -221,3 +221,8 @@ left: calc(50% - 300px);
 .objectHolder {
   background: white;
 }
+
+body::after{
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; // hide images
+   content:url(assets/bg3.jpg);   // load images
+}
