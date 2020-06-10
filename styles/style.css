@@ -173,7 +173,7 @@ left: calc(50% - 300px);
 border: solid 4px black;
 width:60vw;
 height:auto;
-cursor:url(https://wenogk.github.io/comic-strip/assets/music.png);
+cursor:alias;
 }
 
 .storySvgColImage {
@@ -241,6 +241,6 @@ cursor:url(https://wenogk.github.io/comic-strip/assets/music.png);
 }
 
 body::after{
-   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; // hide images
-   content:url(assets/bg3.jpg);   // load images
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+   content:url(assets/bg3.jpg) url(assets/en/panel1a.svg) url(assets/en/panel1b.svg) url(assets/en/panel1c.svg) url(assets/en/panel2.svg) url(assets/en/panel3.svg) url(assets/en/panel4.svg) url(assets/en/panel5.svg) url(assets/en/panel7.svg);
 }
