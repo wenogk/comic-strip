@@ -60,14 +60,6 @@ function boxControlsOnly(s=2) {
   gsap.to(".boxContainer", {duration: s, display: "block", opacity:1, top:h, width:"10%", left:"45%"});
 }
 
-function box(s=1.5) {
-  boxState = "box"
-  gsap.timeline()
-  .to(".aboutformat", {duration:0,opacity:0})
-  .to(".boxContainer", {duration: s, display: "block", opacity:1, top:100, width:"60%", left:"20%"})
-  .to(".aboutformat", {duration:0.5,opacity:1});
-}
-
 function boxBack(s=2) {
   gsap.to(".boxContainer", {duration: s, display:"block", opacity:1, top:100, width:"60%", left:"20%"});
 }
