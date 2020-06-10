@@ -171,10 +171,12 @@ left: calc(50% - 300px);
 .storySvgImage {
   background: white;
 border: solid 4px black;
+cursor:alias;
 }
 
 .storySvgColImage {
   background: white;
+  cursor:alias;
 }
 
 .fixedlogo {
