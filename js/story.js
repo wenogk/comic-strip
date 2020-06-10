@@ -106,13 +106,13 @@ function loadPath(id) {
     `
     return "<a onclick='nextPath(4)'" + ">OPTION 1</a><br />" + "<a onclick='nextPath(5)'" + ">OPTION 2</a>"
   } else if(id == 4) {
-    return svgPanel("panel4");
+    return svgPanel("panel3");
   } else if(id == 5) {
-    return svgPanel("panel5");
+    return svgPanel("panel4");
   } else if(id == 6) {
-    return svgPanel("panel6");
+    return svgPanel("panel5");
   } else if(id == 7) {
-    return svgPanel("panel7");
+    return svgPanel("panel6");
   }
 }
 
