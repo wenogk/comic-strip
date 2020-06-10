@@ -100,7 +100,7 @@ function loadPath(id, isNewStory = true) {
     `;
   } else if(id == 2) {
     return `
-    <div style="background:#B53D32;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
+    <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel2")}
     </div>
     `
