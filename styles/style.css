@@ -171,12 +171,12 @@ left: calc(50% - 300px);
 .storySvgImage {
   background: white;
 border: solid 4px black;
-cursor:alias;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
 }
 
 .storySvgColImage {
   background: white;
-  cursor:alias;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
 }
 
 .fixedlogo {
