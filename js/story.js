@@ -75,7 +75,7 @@ function emptyAllPathsExceptOne(id) { //for space optimization
 }
 function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
-  let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage";
+  let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage img-responsive";
   //return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
   return `<div class='${classVal} objectHolder'><img class="${storySvgImage}" src='assets/${language}/${file}.svg' /></div>`;
 
