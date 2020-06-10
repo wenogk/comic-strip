@@ -2,8 +2,10 @@ let currentPath = 0;
 let prevPath = 0;
 let nextPossible = false;
 let backPossible = false;
+let language = "en"
 
 $( ".language1" ).click(function() {
+  language = "en"
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
@@ -15,6 +17,7 @@ $( ".language1" ).click(function() {
 });
 
 $( ".language2" ).click(function() {
+  language = "es"
   gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
@@ -26,6 +29,7 @@ $( ".language2" ).click(function() {
 });
 
 $( ".language3" ).click(function() {
+  language = "ar"
   gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
@@ -72,7 +76,7 @@ function emptyAllPathsExceptOne(id) { //for space optimization
 }
 function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
-  return `<object type='image/svg+xml' class='${classVal}' data='assets/${file}.svg'></object>`;
+  return `<object type='image/svg+xml' class='${classVal}' data='assets/${language}/${file}.svg'></object>`;
 }
 function loadPath(id, isNewStory = true) {
   console.log("loadPath: " + id)
