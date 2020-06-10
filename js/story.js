@@ -112,10 +112,10 @@ function loadPath(id, isNewStory = true) {
       <div class="vertical-center">
         <div class="optionContainer container">
           <div onclick='nextPath(4)' class='optionButton'>
-            Ask grandma about it
+            1st Option: Ask grandma about it
           </div>
           <div onclick='nextPath(5)' class='optionButton'>
-            Research on it
+            2nd option: I asked a loved one about it and then research on it
           </div>
         </div>
       </div>
