@@ -1,6 +1,25 @@
 
 //gsap.to(".language1", {duration: 1, marginRight:"-200px"});
 //gsap.to(".language2", {duration: 1});
+let boxState = "boxFullyHide";
+$( window ).resize(function() {
+  console.log(boxState)
+  switch(boxState) {
+    case "boxFullyHide":
+      boxFullyHide();
+      break;
+    case "boxControlsOnly":
+      boxControlsOnly();
+      break;
+    case "box":
+      box();
+      break;
+    default:
+      boxFullyHide();
+      break;
+  }
+});
+
 setTimeout(() => {
 gsap.to(".firstHeader", {duration: 3, opacity:1});
 }, 1000);
@@ -22,16 +41,19 @@ function getLanguageDropsBackToFirstState() {
 }
 
 function boxFullyHide() {
+  boxState = "boxFullyHide";
   let h = window.innerHeight - 50;
   gsap.to(".boxContainer", {duration: 2, display: "none", opacity:0, top:h, width:"50%", left:"25%"});
 }
 
 function boxControlsOnly() {
+  boxState = "boxControlsOnly"
   let h = window.innerHeight - 50;
   gsap.to(".boxContainer", {duration: 2, display: "block", opacity:1, top:h, width:"10%", left:"45%"});
 }
 
 function box() {
+  boxState = "box"
   gsap.to(".boxContainer", {duration: 2, display: "block", opacity:1, top:100, width:"60%", left:"20%"});
 }
 
