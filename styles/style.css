@@ -169,12 +169,6 @@ left: calc(50% - 300px);
   width:auto;
 }
 
-.titleSvg {
-  margin-top:50px;
-  height:80%;
-  width:auto;
-}
-
 .storySvgCols {
   border: solid 2px black;
   height:auto;

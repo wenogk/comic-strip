@@ -25,7 +25,7 @@ gsap.to(".titleSvg", {duration: 3, opacity:1});
 }, 1000);
 
 setTimeout(() => {
-gsap.to(".titleSvg", {duration: 1, height: "200px", left: "0px", top: "-50px", opacity:1});
+gsap.to(".titleSvg", {duration: 1, width: "15%", left: "0px", top: "0px", opacity:1});
 }, 4000);
 
 setTimeout(() => {
