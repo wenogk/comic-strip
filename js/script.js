@@ -71,3 +71,14 @@ function box(s=1.5) {
 function boxBack(s=2) {
   gsap.to(".boxContainer", {duration: s, display:"block", opacity:1, top:100, width:"60%", left:"20%"});
 }
+function showCheek() {
+   $("#cheeks").css("opacity","1");
+   console.log("hovered");
+
+  }
+function hideCheek() {
+   $("#cheeks").css("opacity","0");
+   console.log("not hovered");
+
+  }
+$( ".storySvg" ).mouseenter(showCheek).mouseleave(hideCheek);

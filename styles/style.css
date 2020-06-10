@@ -200,3 +200,7 @@ left: calc(50% - 300px);
   height:100px;
   cursor: pointer;
 }
+
+#cheeks {
+  opacity:0;
+}
