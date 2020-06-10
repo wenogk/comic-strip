@@ -8,11 +8,6 @@
 	.st2{fill:#202020;}
 	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
 
-	.st2:hover {
-	fill: red;
-	stroke: red;
-	}
-
 </style>
 <g id="Layer_1" class="st0">
 
