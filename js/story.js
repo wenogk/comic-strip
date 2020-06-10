@@ -4,21 +4,27 @@ let nextPossible = true;
 let backPossible = true;
 
 $( ".language1" ).click(function() {
-  gsap.timeline({}).to(".language1", {duration: 0.25, y: "-30px", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
-  boxControlsOnly();
-  nextPath();
+  gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
+  setTimeout(() => {
+    boxControlsOnly();
+    nextPath();
+  }, 2000);
 });
 
 $( ".language2" ).click(function() {
-  gsap.timeline({}).to(".language2", {duration: 0.25, y: "-30px", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
-  boxControlsOnly();
-  nextPath();
+  gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
+  setTimeout(() => {
+    boxControlsOnly();
+    nextPath();
+  }, 2000);
 });
 
 $( ".language3" ).click(function() {
-  gsap.timeline({}).to(".language3", {duration: 0.25, y: "-30px", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
-  boxControlsOnly();
-  nextPath();
+  gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
+  setTimeout(() => {
+    boxControlsOnly();
+    nextPath();
+  }, 2000);
 });
 
 $( ".nextButton" ).click(function() {
@@ -115,6 +121,8 @@ function nextPath(id=null) {
 function previousPath() {
   emptyAllPathsExceptOne(currentPath);
   if(currentPath<=1) {
+    boxFullyHide();
+    getLanguageDropsBackToFirstState();
     gsap.to(".path_" + currentPath, {duration: 3, scale:"0.5", left: "-100%", ease: "power4.out"});
     currentPath = 0;
   } else {
