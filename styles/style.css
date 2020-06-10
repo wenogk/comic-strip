@@ -4,12 +4,7 @@ body {
 }
 html, body {margin: 0; height: 100%; overflow: hidden}
 
-.fixedlogo {
-  margin-top:3%;
-  height:10$;
-  width:auto;
-  margin-left:5%;
-}
+
 
 
 .firstHeader {
@@ -167,6 +162,16 @@ left: calc(50% - 300px);
   margin-top:50px;
   height:80%;
   width:auto;
+  margin:auto;
+  position:relative;
+}
+.fixedlogo {
+  margin-top:3%;
+  height:5%;
+  width:auto;
+  margin-left:2%;
+  position:absolute;
+
 }
 
 .storySvgCols {
