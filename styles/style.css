@@ -139,7 +139,6 @@ left: calc(50% - 300px);
   top:0;
   left:100%;
   z-index: 3;
-  background:blue;
   height:100%;
   width:100%;
   text-align: center;
