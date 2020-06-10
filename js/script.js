@@ -21,11 +21,11 @@ $( window ).resize(function() {
 });
 
 setTimeout(() => {
-gsap.to(".firstHeader", {duration: 3, opacity:1});
+gsap.to(".titleSvg", {duration: 3, opacity:1});
 }, 1000);
 
 setTimeout(() => {
-gsap.to(".firstHeader", {duration: 2, opacity:0});
+gsap.to(".titleSvg", {duration: 1, width: "15%", left: "0px", top: "0px", opacity:1});
 }, 4000);
 
 setTimeout(() => {
@@ -81,4 +81,3 @@ function hideCheek() {
    console.log("not hovered");
 
   }
-$( ".storySvg" ).mouseenter(showCheek).mouseleave(hideCheek);
