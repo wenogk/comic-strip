@@ -9,7 +9,7 @@ $( ".language1" ).click(function() {
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
-    boxControlsOnly();
+
     nextPath();
     nextPossible = true;
     backPossible = true;
@@ -21,7 +21,7 @@ $( ".language2" ).click(function() {
   gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
-    boxControlsOnly();
+
     nextPath();
     nextPossible = true;
     backPossible = true;
@@ -33,7 +33,6 @@ $( ".language3" ).click(function() {
   gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
   setTimeout(() => {
-    boxControlsOnly();
     nextPath();
     nextPossible = true;
     backPossible = true;
