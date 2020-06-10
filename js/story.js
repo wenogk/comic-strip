@@ -115,15 +115,27 @@ function loadPath(id, isNewStory = true) {
   } else if(id == 4) {
     $(".nextButton").hide();
     nextPossible = false;
+    let option1 = "Ask grandma about it";
+    let option2 = "I asked a loved one about it and then research on it"
+    if(language=="es") {
+      option1 = "Le pregunto a mi abuela";
+      option2 = "Le pregunto a alguien que quiero e investigo sobre el tema"
+    } else if (language=="ar") {
+      option1 = "Ask grandma about it";
+      option2 = "I asked a loved one about it and then research on it"
+    }
+
     return `
     <div style="background:white;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       <div class="vertical-center">
         <div class="optionContainer container">
           <div onclick='nextPath(5)' class='optionButton'>
-            Ask grandma about it
+
+            ${option1}
           </div>
           <div onclick='nextPath(6)' class='optionButton'>
-            I asked a loved one about it and then research on it
+            ${option2}
+
         </div>
       </div>
     </div>
@@ -155,7 +167,15 @@ function loadPath(id, isNewStory = true) {
   }
 
 }
-
+function restart() {
+  boxFullyHide();
+  getLanguageDropsBackToFirstState();
+  emptyAllPathsExceptOne(99);
+  gsap.to(".path_" + currentPath, {duration: 3, scale:"0.5", left: "-100%", ease: "power4.out"});
+  currentPath = 0;
+  nextPossible = false;
+  backPossible = false;
+}
 function nextPath(id=null) {
   emptyAllPathsExceptOne(currentPath);
   if(currentPath==8) {
