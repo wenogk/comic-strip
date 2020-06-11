@@ -171,12 +171,12 @@ left: calc(50% - 300px);
 .storySvgImage {
   background: white;
 border: solid 4px black;
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+  cursor: url("https://wenogk.github.com/comic-strip/assets/music.png"), auto;
 }
 
 .storySvgColImage {
   background: white;
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+  cursor: url("https://wenogk.github.com/comic-strip/assets/music.png"), auto;
 }
 
 .fixedlogo {
