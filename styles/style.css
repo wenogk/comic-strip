@@ -50,13 +50,13 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 .language1 {
   /* Firefox */
-left: -moz-calc(50% - 25%);
+left: -moz-calc(50% - 300px);
 /* WebKit */
-left: -webkit-calc(50% - 25%);
+left: -webkit-calc(50% - 300px);
 /* Opera */
-left: -o-calc(50% - 25%);
+left: -o-calc(50% - 300px);
 /* Standard */
-left: calc(50% - 25%);
+left: calc(50% - 300px);
 }
 
 .language2 {
@@ -64,13 +64,13 @@ left: calc(50% - 25%);
 }
 
 .language3 {
-  left: -moz-calc(50% + 25%);
+  left: -moz-calc(50% + 300px);
   /* WebKit */
-  left: -webkit-calc(50% + 25%);
+  left: -webkit-calc(50% + 300px);
   /* Opera */
-  left: -o-calc(50% + 25%);
+  left: -o-calc(50% + 300px);
   /* Standard */
-  left: calc(50% + 25%);
+  left: calc(50% + 300px);
 }
 
 .boxContainer {
