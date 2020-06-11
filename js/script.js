@@ -22,11 +22,11 @@ $( window ).resize(function() {
 
 setTimeout(() => {
 gsap.to(".titleSvg", {duration: 3, opacity:1});
-}, 3000);
+}, 5000);
 
 setTimeout(() => {
 gsap.to(".titleSvg", {duration: 1, width: "15%", left: "0px", top: "0px", opacity:1});
-}, 6000);
+}, 8000);
 
 setTimeout(() => {
 gsap.to(".language1", {duration: 1, top: "50%", opacity:1});
