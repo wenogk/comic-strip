@@ -1,10 +1,10 @@
-let currentPath = 0;
-let prevPath = 0;
-let nextPossible = false;
-let backPossible = false;
-let language = "en"
+let currentPath = 0; //this variable tracks the current scene in the story
+let prevPath = 0; //this tracks the previous scene
+let nextPossible = false; // bool for when user should & should not be able to click next (example: when choosing the options)
+let backPossible = false; // bool for when user should & should not be able to click back (example: when in the first scene)
+let language = "en" // can be "ar","en", or "es", this is used to load different images using the assets/{language}/{image}  and also for loading the different about information
 
-$( ".language1" ).click(function() {
+$( ".language1" ).click(function() { //when the english, "droplet" button is clicked
   language = "en"
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
@@ -16,7 +16,7 @@ $( ".language1" ).click(function() {
   }, 2000);
 });
 
-$( ".language2" ).click(function() {
+$( ".language2" ).click(function() {  //when the spanish, "droplet" button is clicked
   language = "es"
   gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
@@ -28,7 +28,7 @@ $( ".language2" ).click(function() {
   }, 2000);
 });
 
-$( ".language3" ).click(function() {
+$( ".language3" ).click(function() {  //when the arabic, "droplet" button is clicked
   language = "ar"
   gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
   hideLanguageDrops();
