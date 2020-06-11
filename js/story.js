@@ -51,19 +51,19 @@ $( ".restartButton" ).click(function() {
   restart();
 });
 
-$(document).keydown(function(e){
-
-    if (e.which == 37) {
-      if(backPossible) {
-         previousPath();
-       }
-    }
-    if (e.which == 39) {
-      if(nextPossible) {
-         nextPath();
-      }
-    }
-});
+// $(document).keydown(function(e){
+//
+//     if (e.which == 37) {
+//       if(backPossible) {
+// //         previousPath();
+//        }
+//     }
+//     if (e.which == 39) {
+//       if(nextPossible) {
+// //         nextPath();
+//       }
+//     }
+// });
 
 function emptyAllPathsExceptOne(id) { //for space optimization
   for(let x=0; x<8; x++) {
