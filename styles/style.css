@@ -10,7 +10,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   width: 50%;
   left: 25%;
   top: 5%;
-
+  z-index:99;
 }
 .firstHeader {
   margin-left: auto;
