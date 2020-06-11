@@ -19,6 +19,6 @@ Romeno implemented the wireframe and saad worked mostly on the interactivity. Pa
 
 - Reflection/Evaluation: We are very happy about this project and its accessibility by making it in difference languages. We would have liked to make it more responsive for smartphone devices. 
 
-(not this is Pam talking: I appreciate a lot our team effort because we use as an advantage our better skills but that do not comparmentalized our roles in making the project. Thank you, guys! I am veryyyyy happy!!!!)
+(note: this is Pam talking, I appreciate a lot our team effort because we use as an advantage our better skills but that do not comparmentalized our roles in making the project. Thank you, guys! I am veryyyyy happy!!!!)
 
  
