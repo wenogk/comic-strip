@@ -3,7 +3,7 @@ body {
   background-size: cover;
 }
 html, body {margin: 0; height: 100%; overflow: hidden}
-
+/* SVg image for the title */
 .titleSvg {
   opacity: 0;
   position: fixed;
@@ -12,6 +12,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   top: 5%;
   z-index:99;
 }
+/* Style for the container of the logo */
 .firstHeader {
   margin-left: auto;
   margin-right: auto;
@@ -22,7 +23,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   color: black;
   opacity: 0;
 }
-
+/* Style for the language buttons+movenment+hover*/
 .languageButton {
   position: absolute;
   background: #CC3333;
@@ -74,6 +75,8 @@ left: calc(50% - 300px);
   left: calc(50% + 300px);
 }
 
+
+/*this is for mobile screen*/
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
@@ -117,6 +120,8 @@ left: calc(50% - 300px);
   }
 }
 
+/*Style for the about box and the controls*/
+
 .boxContainer {
   z-index: 4;
   position: absolute;
@@ -137,7 +142,7 @@ left: calc(50% - 300px);
   /* Standard */
   top: calc(100% - 50px);
 }
-
+/* style for alll of the buttons used +the hover */
 .nextButton {
     width: 44px;
     height: 44px;
@@ -171,7 +176,6 @@ left: calc(50% - 300px);
   height: 46px;
   padding:2px;
 }
-
 .backButton {
   width: 46px;
   height: 46px;
@@ -184,6 +188,7 @@ left: calc(50% - 300px);
 .backButton:hover {
   cursor: pointer;
 }
+/*Generating newStoryin the right of the screen*/
 .newStory {
   position: absolute;
   top:0;
@@ -193,7 +198,7 @@ left: calc(50% - 300px);
   width:100%;
   text-align: center;
 }
-
+/*Generating prev Story in the left of the screen*/
 .prevStory {
   position: absolute;
   top:0;
@@ -204,7 +209,7 @@ left: calc(50% - 300px);
   width:100%;
   text-align: center;
 }
-
+/*Classes used for displaying of story svg images*/
 .storySvg {
   position: absolute;
   margin-top:50px;
@@ -222,13 +227,14 @@ overflow: hidden;
   background: white;
 border: solid 4px black;
 }
+
 .storySvgColImage {
   background: white;
   border: solid 4px black;
   height: 40vh;
   overflow-x: hidden;
 }
-
+/*used for the logo display*/
 .fixedlogo {
   margin-top:3%;
   height:5%;
@@ -237,21 +243,22 @@ border: solid 4px black;
   position:absolute;
 
 }
-
+/*used for single image in a panel*/
 .storySvgCols {
   height:auto;
   width:80%;
 }
 
-
+/* Used for the panel with two images */
 .imgColumn {
   height:80vh;
 }
-
+/* Used for the panel with two images */
 .three-col-panel {
   width:100%;
   height:100%;
 }
+/* the panel with two images */
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
@@ -260,7 +267,7 @@ border: solid 4px black;
   align-items: center;
   text-align: center !important;
 }
-
+/* option button */
 .optionButton {
   width:100%;
   text-align: center !important;
@@ -273,7 +280,7 @@ border: solid 4px black;
   margin-bottom:50px;
   font-family: 'Gloria Hallelujah', cursive;;
 }
-
+/* hovering over options */
 .optionButton:hover {
   background: #8a0303;
   width:100%;
