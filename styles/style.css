@@ -171,12 +171,15 @@ left: calc(50% - 300px);
 .storySvgImage {
   background: white;
 border: solid 4px black;
-  cursor: url("https://wenogk.github.com/comic-strip/assets/music.png"), auto;
+
 }
 
+.storySvgImageWithoutCursor {
+  background: white;
+border: solid 4px black;
+}
 .storySvgColImage {
   background: white;
-  cursor: url("https://wenogk.github.com/comic-strip/assets/music.png"), auto;
 }
 
 .fixedlogo {
