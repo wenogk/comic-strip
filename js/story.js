@@ -5,67 +5,53 @@ let backPossible = false; // bool for when user should & should not be able to c
 let language = "en" // can be "ar","en", or "es", this is used to load different images using the assets/{language}/{image}  and also for loading the different about information
 
 $( ".language1" ).click(function() { //when the english, "droplet" button is clicked
-  language = "en"
-  gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1});
+  language = "en" //set the language variable to en cus the english button was clicked
+  gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1}); //animation to drop the blood drop button
   hideLanguageDrops();
   setTimeout(() => {
 
-    nextPath();
+    nextPath(); //proceed to the next path after 2 seconds (after the drop animation is done)
     nextPossible = true;
     backPossible = true;
   }, 2000);
 });
 
 $( ".language2" ).click(function() {  //when the spanish, "droplet" button is clicked
-  language = "es"
-  gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1});
+  language = "es" //set the language variable to es cus the english button was clicked
+  gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1}); //animation to drop the blood drop button
   hideLanguageDrops();
   setTimeout(() => {
 
-    nextPath();
+    nextPath(); //proceed to the next path after 2 seconds (after the drop animation is done)
     nextPossible = true;
     backPossible = true;
   }, 2000);
 });
 
 $( ".language3" ).click(function() {  //when the arabic, "droplet" button is clicked
-  language = "ar"
-  gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1});
+  language = "ar" //set the language variable to ar cus the english button was clicked
+  gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1}); //animation to drop the blood drop button
   hideLanguageDrops();
   setTimeout(() => {
-    nextPath();
+    nextPath(); //proceed to the next path after 2 seconds (after the drop animation is done)
     nextPossible = true;
     backPossible = true;
   }, 2000);
 });
 
-$( ".nextButton" ).click(function() {
+$( ".nextButton" ).click(function() { //onclick listener for the next button
   nextPath();
 });
 
-$( ".backButton" ).click(function() {
+$( ".backButton" ).click(function() { //onclick listener for the back button (not on current site but full implementation done)
   previousPath();
 });
 
-$( ".restartButton" ).click(function() {
+$( ".restartButton" ).click(function() { //onclick listener for the restart button
   restart();
 });
 
-// $(document).keydown(function(e){
-//
-//     if (e.which == 37) {
-//       if(backPossible) {
-// //         previousPath();
-//        }
-//     }
-//     if (e.which == 39) {
-//       if(nextPossible) {
-// //         nextPath();
-//       }
-//     }
-// });
-
-function emptyAllPathsExceptOne(id) { //for space optimization
+function emptyAllPathsExceptOne(id) { //for space optimization, basically once a path is loaded after that path has been passed that HTML dom element is removed therefore reducing the load on the browser
   for(let x=0; x<8; x++) {
     if(x!=id) {
       $(".path_" + x).remove();
@@ -73,16 +59,16 @@ function emptyAllPathsExceptOne(id) { //for space optimization
     }
   }
 }
-function svgPanel(file, isCols = false) {
-  let classVal = isCols ? "storySvgCols" : "storySvg";
+function svgPanel(file, isCols = false) { // Function that takes in a file param and returns a div with the image and relavant classes based on the second param to set whether it is a full size image or a column image
+  let classVal = isCols ? "storySvgCols" : "storySvg"; //setting relevant classes
 
-  let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage img-responsive";
-  let styles = (file!="panel7") ? "cursor: url('https://wenogk.github.com/comic-strip/assets/music36.png'), auto;" : "";
+  let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage img-responsive"; //setting relevant classes
+  let styles = (file!="panel7") ? "cursor: url('https://wenogk.github.com/comic-strip/assets/music36.png'), auto;" : ""; //Adding the audio cursor on hover to all images except the last one as there is no sound in that one
   //return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
-  return `<div style="${styles}" class='${classVal} objectHolder'><img class="${storySvgImage}" src='assets/${language}/${file}.svg' /></div>`;
+  return `<div style="${styles}" class='${classVal} objectHolder'><img class="${storySvgImage}" src='assets/${language}/${file}.svg' /></div>`; // the src attribute here is what allows us to dynamically get different language stories on the fly with minimal changes in the code
 
 }
-function loadPath(id, isNewStory = true) {
+function loadPath(id, isNewStory = true) { // function that takes in the path id and returns the relevant story image item(s) with styling
   console.log("loadPath: " + id)
   $(".nextButton").show();
   nextPossible = true;
@@ -116,7 +102,7 @@ function loadPath(id, isNewStory = true) {
     </div>
 
     `;
-  } else if(id == 4) {
+  } else if(id == 4) { //id that has the options
     $(".nextButton").hide();
     boxControlsOnly(1);
     nextPossible = false;
@@ -144,7 +130,7 @@ function loadPath(id, isNewStory = true) {
         </div>
       </div>
     </div>
-    `
+    `; //the onclick handlers here simply load the nextPath with a specified id rather than simply going to the next path
   } else if(id == 5) {
     return `
     <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
@@ -164,7 +150,7 @@ function loadPath(id, isNewStory = true) {
     </div>
     `
   } else if(id == 8) {
-    boxControlsOnly(1);
+    boxControlsOnly(1); //set the box controls to be visible at the bottom
     return `
     <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel("panel7")}
@@ -173,24 +159,24 @@ function loadPath(id, isNewStory = true) {
   }
 
 }
-function restart() {
-  boxFullyHide();
-  getLanguageDropsBackToFirstState();
-  emptyAllPathsExceptOne(99);
+function restart() { //function to restart the story from the beginning
+  boxFullyHide();  //set the box controls to be not visible
+  getLanguageDropsBackToFirstState();  //set the language "droplet" buttons to the initial state by animation
+  emptyAllPathsExceptOne(99);  //empty all paths so space is saved,
   gsap.to(".path_" + currentPath, {duration: 3, scale:"0.5", left: "-100%", ease: "power4.out"});
   currentPath = 0;
   nextPossible = false;
   backPossible = false;
 }
-function nextPath(id=null) {
+function nextPath(id=null) { //function to go to the next story unless an id is specified in the argument, then the story will proceed to that id
   boxFullyHide(1);
-  emptyAllPathsExceptOne(currentPath);
-  if(currentPath==8) {
+  emptyAllPathsExceptOne(currentPath); //space optimization
+  if(currentPath==8) { //if this is the last path in the story
     backPossible = false;
-    box();
-    $(".nextButton").hide()
-    $(".backButton").hide()
-    $(".restartButton").show()
+    box(); //show the about box after the animation
+    $(".nextButton").hide() //hide the next button
+    $(".backButton").hide() //hide the back button
+    $(".restartButton").show() //show the restart button
   } else {
     backPossible = true;
     prevPath = currentPath;
@@ -209,7 +195,7 @@ function nextPath(id=null) {
   }
 }
 
-function previousPath() {
+function previousPath() { //code to go to the previous path (not used in UI but fully functional, you can call this function manually in the google chrome console as previousPath() )
 
   emptyAllPathsExceptOne(currentPath);
   if(currentPath<=1) {
@@ -238,7 +224,7 @@ function previousPath() {
 
 }
 
-function box(s=1.5) {
+function box(s=1.5) { //The animation of loading the about info for the correct language after a smooth animation
   let aboutContent = '';
   if(language == "en") {
     aboutContent = `
@@ -309,5 +295,5 @@ Hecho por Pamela Martinez, Saad Teeti, and Romeno Wenogk Fernando.
   .to(".aboutformat", {duration:0,opacity:0})
   .to(".path_8 > div > img", {duration:0.3,opacity:0})
   .to(".boxContainer", {duration: s, display: "block", opacity:1, top:"5%", width:"70%", left:"15%"})
-  .to(".aboutformat", {duration:0.5,opacity:1});
+  .to(".aboutformat", {duration:0.5,opacity:1}); //animation
 }
