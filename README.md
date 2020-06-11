@@ -1,6 +1,8 @@
 # comic-strip
 
 Project Name: Period.s
+
+
 Project Description: The purpose of this comic is to normalize the idea of menstruation to children. Until today many women around the world continue to stop their education after they have their first menstruation. It is very important to empower young girls by giving them access to information and resources so they can develop a healthy relationship between their period, their bodies and their self-esteem. Menstruation sounds scary for many people because it is a spoken topic in many cultures. Menstruation is perceived as a taboo in different societies. By creating this project, we are hoping to normalize this topic in our cultures along the lines of introducing the idea for little kids and allowing young girls to express themselves freely.
 
 
