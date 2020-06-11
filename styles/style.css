@@ -224,7 +224,9 @@ border: solid 4px black;
 }
 .storySvgColImage {
   background: white;
-  overflow: hidden;
+  border: solid 4px black;
+  height: 40vh;
+  overflow-x: hidden;
 }
 
 .fixedlogo {
@@ -237,10 +239,10 @@ border: solid 4px black;
 }
 
 .storySvgCols {
-  border: solid 4px black;
   height:auto;
   width:80%;
 }
+
 
 .imgColumn {
   height:80vh;
