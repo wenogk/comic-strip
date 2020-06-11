@@ -244,5 +244,6 @@ border: solid 4px black;
 
 body::after{
    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-   content:url(assets/bg3.jpg) url(assets/en/panel1a.svg) url(assets/en/panel1b.svg) url(assets/en/panel1c.svg) url(assets/en/panel2.svg) url(assets/en/panel3.svg) url(assets/en/panel4.svg) url(assets/en/panel5.svg) url(assets/en/panel7.svg);
+   content:url(assets/bg3.jpg) url(assets/en/panel1a.svg) url(assets/en/panel1b.svg) url(assets/en/panel1c.svg) url(assets/en/panel2.svg) url(assets/en/panel3.svg) url(assets/en/panel4.svg) url(assets/en/panel5.svg) url(assets/en/panel7.svg) url(assets/ar/panel1a.svg) url(assets/ar/panel1b.svg) url(assets/ar/panel1c.svg) url(assets/ar/panel2.svg) url(assets/ar/panel3.svg) url(assets/ar/panel4.svg) url(assets/ar/panel5.svg) url(assets/ar/panel7.svg) url(assets/es/panel1a.svg) url(assets/es/panel1b.svg) url(assets/es/panel1c.svg) url(assets/es/panel2.svg) url(assets/es/panel3.svg) url(assets/es/panel4.svg) url(assets/es/panel5.svg) url(assets/es/panel7.svg);
+
 }
