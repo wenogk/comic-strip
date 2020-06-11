@@ -77,7 +77,7 @@ function svgPanel(file, isCols = false) {
   let classVal = isCols ? "storySvgCols" : "storySvg";
 
   let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage img-responsive";
-  let styles = (file!="panel7") ? "cursor: url('https://wenogk.github.com/comic-strip/assets/music.png'), auto;" : "";
+  let styles = (file!="panel7") ? "cursor: url('https://wenogk.github.com/comic-strip/assets/music4.png'), auto;" : "";
   //return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
   return `<div style="${styles}" class='${classVal} objectHolder'><img class="${storySvgImage}" src='assets/${language}/${file}.svg' /></div>`;
 
