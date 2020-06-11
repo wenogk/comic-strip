@@ -296,7 +296,7 @@ Hecho por Pamela Martinez, Saad Teeti, and Romeno Wenogk Fernando.
 تعلم اكثر عن الدورة الشهرية
   <br>
   <a href="https://www.mayoclinic.org/ar/healthy-lifestyle/womens-health/in-depth/menstrual-cycle/art-20047186"  target= "_BLANK"> الدورة الشهرية: الأمور الطبيعية وغير الطبيعية  </a><br>
-  <a href="https://www.webteb.com/articles/%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D8%B9%D9%86-%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%D8%A9_22279 target = "_BLANK"> معلومات عن الدورة الشهرية </a><br>
+  <a href="https://www.webteb.com/articles/%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D8%B9%D9%86-%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%D8%A9_22279" target = "_BLANK"> معلومات عن الدورة الشهرية </a><br>
   <a href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/wh/Pages/012.aspx
   " target= "_BLANK"> صحة المرأه </a><br>
   بواسطة بام مارتينيز, سعد تيتي, رومينو فيرناندو
