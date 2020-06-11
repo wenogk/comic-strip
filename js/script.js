@@ -32,7 +32,7 @@ setTimeout(() => {
 gsap.to(".language1", {duration: 1, top: "50%", opacity:1});
 gsap.to(".language2", {duration: 2, top: "50%", opacity:1});
 gsap.to(".language3", {duration: 3, top: "50%", opacity:1});
-}, 5000);
+}, 9000);
 
 function getLanguageDropsBackToFirstState() {
   gsap.to(".language1", {duration: 1, top: "48%", opacity:1, display: "block"});
