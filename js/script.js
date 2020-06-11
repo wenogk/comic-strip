@@ -21,6 +21,7 @@ $( window ).resize(function() {
 });
 
 setTimeout(() => {
+$(".loader").hide();
 gsap.to(".titleSvg", {duration: 3, opacity:1});
 }, 1000);
 
