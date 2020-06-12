@@ -154,14 +154,8 @@ function loadPath(id, isNewStory = true) { // function that takes in the path id
     `
   } else if(id == 8) {
     boxControlsOnly(1); //set the box controls to be visible at the bottom
-    let panelVal = "panel7"
-    if (changer == true) {
-      if(isAskGrandmaPath) {
-        panelVal = "panel7g"
-      } else {
-        panelVal = "panel7r"
-      }
-    }
+    let specificPanelVal = (isAskGrandmaPath) ? "panel7g" : "panel7r";
+    let panelVal = (changer) ? "panel7" : specificPanelVal;
     return `
     <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
       ${svgPanel(panelVal)}
