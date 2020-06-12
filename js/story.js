@@ -64,7 +64,7 @@ function svgPanel(file, isCols = false) { // Function that takes in a file param
   let classVal = isCols ? "storySvgCols" : "storySvg"; //setting relevant classes
 
   let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage img-responsive"; //setting relevant classes
-  let styles = (file.startsWith("panel7")) ? "cursor: url('https://wenogk.github.com/comic-strip/assets/music36.png'), auto;" : ""; //Adding the audio cursor on hover to all images except the last one as there is no sound in that one
+  let styles = (!file.startsWith("panel7")) ? "cursor: url('https://wenogk.github.com/comic-strip/assets/music36.png'), auto;" : ""; //Adding the audio cursor on hover to all images except the last one as there is no sound in that one
   //return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
   return `<div style="${styles}" class='${classVal} objectHolder'><img class="${storySvgImage}" src='assets/${language}/${file}.svg' /></div>`; // the src attribute here is what allows us to dynamically get different language stories on the fly with minimal changes in the code
 
