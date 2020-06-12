@@ -1,6 +1,6 @@
-
-//gsap.to(".language1", {duration: 1, marginRight:"-200px"});
-//gsap.to(".language2", {duration: 1});
+let nextPossible = false; // bool for when user should & should not be able to click next (example: when choosing the options)
+let backPossible = false; // bool for when user should & should not be able to click back (example: when in the first scene)
+let language = "en" // can be "ar","en", or "es", this is used to load different images using the assets/{language}/{image}  and also for loading the different about information
 let boxState = "boxFullyHide"; //initial state of box (the next and restart controls + about section) is fully hidden
 $( window ).resize(function() { // on resize of the window animate the box back to wherever its supposed to be
   console.log(boxState)
@@ -59,4 +59,15 @@ function boxControlsOnly(s=2) { // animation of the control box to show only con
   boxState = "boxControlsOnly"
   let h = window.innerHeight - 50;
   gsap.to(".boxContainer", {duration: s, display: "block", opacity:1, top:h, width:"10%", left:"45%"});
+}
+
+function setupControlsContainer() {
+  let en_es = `
+  <div class="nextButton buttonRight" onclick="nextPath();"><img src="assets/next.png" /></div>
+  <div class="restartButton buttonLeft" onclick="restart();"><img src="assets/restart.png" /></div>`;
+  let ar = `
+  <div class="nextButton buttonLeft" onclick="nextPath();"><img src="assets/back.png" /></div>
+  <div class="restartButton buttonRight" onclick="restart();"><img src="assets/restart.png" /></div>`;
+  let controls = (language=="ar") ? ar : en_es;
+  $(".controlsContainer").html(controls)
 }

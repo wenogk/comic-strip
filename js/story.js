@@ -1,14 +1,12 @@
 let currentPath = 0; //this variable tracks the current scene in the story
 let prevPath = 0; //this tracks the previous scene
-let nextPossible = false; // bool for when user should & should not be able to click next (example: when choosing the options)
-let backPossible = false; // bool for when user should & should not be able to click back (example: when in the first scene)
-let language = "en" // can be "ar","en", or "es", this is used to load different images using the assets/{language}/{image}  and also for loading the different about information
 let isAskGrandmaPath = true; //this will be set based on the options chosen
 
 $( ".language1" ).click(function() { //when the english, "droplet" button is clicked
   language = "en" //set the language variable to en cus the english button was clicked
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1}); //animation to drop the blood drop button
   hideLanguageDrops();
+  setupControlsContainer();
   setTimeout(() => {
 
     nextPath(); //proceed to the next path after 2 seconds (after the drop animation is done)
@@ -21,6 +19,7 @@ $( ".language2" ).click(function() {  //when the spanish, "droplet" button is cl
   language = "es" //set the language variable to es cus the english button was clicked
   gsap.timeline({}).to(".language2", {duration: 0.25, y: "-2%", opacity:1}).to(".language2", {duration: 2, top: "200%", opacity:1}); //animation to drop the blood drop button
   hideLanguageDrops();
+  setupControlsContainer();
   setTimeout(() => {
 
     nextPath(); //proceed to the next path after 2 seconds (after the drop animation is done)
@@ -33,6 +32,7 @@ $( ".language3" ).click(function() {  //when the arabic, "droplet" button is cli
   language = "ar" //set the language variable to ar cus the english button was clicked
   gsap.timeline({}).to(".language3", {duration: 0.25, y: "-2%", opacity:1}).to(".language3", {duration: 2, top: "200%", opacity:1}); //animation to drop the blood drop button
   hideLanguageDrops();
+  setupControlsContainer();
   setTimeout(() => {
     nextPath(); //proceed to the next path after 2 seconds (after the drop animation is done)
     nextPossible = true;
@@ -71,6 +71,9 @@ function svgPanel(file, isCols = false) { // Function that takes in a file param
 }
 function loadPath(id, isNewStory = true) { // function that takes in the path id and returns the relevant story image item(s) with styling
   console.log("loadPath: " + id)
+  if(language=="ar") {
+    isNewStory = false;
+  }
   $(".nextButton").show();
   nextPossible = true;
   if(id == 1) {
@@ -194,8 +197,15 @@ function nextPath(id=null) { //function to go to the next story unless an id is 
 
     let element = loadPath(currentPath);
     $("body").append(element);
-    gsap.to(".path_" + prevPath, {duration: 3, x:"-200%", ease: "power4.out"}); // after this delete the previous path element
-    gsap.to(".path_" + currentPath, {duration: 3, x:"-100%", ease: "power4.out"}); // after this delete the previous path element
+    if(language!="ar") {
+      gsap.to(".path_" + prevPath, {duration: 3, x:"-200%", ease: "power4.out"}); // after this delete the previous path element
+      gsap.to(".path_" + currentPath, {duration: 3, x:"-100%", ease: "power4.out"}); // after this delete the previous path element
+    } else { // if arabic make animation go other way
+
+      gsap.to(".path_" + prevPath, {duration: 3, x:"200%", ease: "power4.out"});
+      gsap.to(".path_" + currentPath, {duration: 3, x:"100%", ease: "power4.out"}); // after this delete the previous path element
+
+      }
   }
 }
 
@@ -297,7 +307,7 @@ Hecho por Pamela Martinez, Saad Teeti, and Romeno Wenogk Fernando.
   boxState = "box"
   gsap.timeline()
   .to(".aboutformat", {duration:0,opacity:0})
-  .to(".path_8 > div > img", {duration:0.3,opacity:0})
+  .to(".path_8", {duration:0.3,opacity:0,display:"none"})
   .to(".boxContainer", {duration: s, display: "block", opacity:1, top:"5%", width:"70%", left:"15%"})
   .to(".aboutformat", {duration:0.5,opacity:1}); //animation
 }
