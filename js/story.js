@@ -170,7 +170,7 @@ function restart() { //function to restart the story from the beginning
   boxFullyHide();  //set the box controls to be not visible
   getLanguageDropsBackToFirstState();  //set the language "droplet" buttons to the initial state by animation
   emptyAllPathsExceptOne(99);  //empty all paths so space is saved,
-  gsap.to(".path_" + currentPath, {duration: 3, scale:"0.5", left: "-100%", ease: "power4.out"});
+  gsap.to(".path_" + currentPath, {duration: 2, opacity: "0", display:"none", ease: "power4.out"});
   currentPath = 0;
   nextPossible = false;
   backPossible = false;
@@ -307,7 +307,7 @@ Hecho por Pamela Martinez, Saad Teeti, and Romeno Wenogk Fernando.
   boxState = "box"
   gsap.timeline()
   .to(".aboutformat", {duration:0,opacity:0})
-  .to(".path_8", {duration:0.3,opacity:0,display:"none"})
+  .to(".path_8 > div > img", {duration:0.3,opacity:0,display:"none"})
   .to(".boxContainer", {duration: s, display: "block", opacity:1, top:"5%", width:"70%", left:"15%"})
   .to(".aboutformat", {duration:0.5,opacity:1}); //animation
 }
