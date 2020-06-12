@@ -4,7 +4,7 @@ let nextPossible = false; // bool for when user should & should not be able to c
 let backPossible = false; // bool for when user should & should not be able to click back (example: when in the first scene)
 let language = "en" // can be "ar","en", or "es", this is used to load different images using the assets/{language}/{image}  and also for loading the different about information
 let isAskGrandmaPath = true; //this will be set based on the options chosen
-let changer = false; // variable for debugging
+
 $( ".language1" ).click(function() { //when the english, "droplet" button is clicked
   language = "en" //set the language variable to en cus the english button was clicked
   gsap.timeline({}).to(".language1", {duration: 0.25, y: "-2%", opacity:1}).to(".language1", {duration: 2, top: "200%", opacity:1}); //animation to drop the blood drop button
@@ -155,10 +155,9 @@ function loadPath(id, isNewStory = true) { // function that takes in the path id
   } else if(id == 8) {
     boxControlsOnly(1); //set the box controls to be visible at the bottom
     let specificPanelVal = (isAskGrandmaPath) ? "panel7g" : "panel7r";
-    let panelVal = (changer) ? "panel7" : specificPanelVal;
     return `
     <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      ${svgPanel(panelVal)}
+      ${svgPanel(specificPanelVal)}
     </div>
     `
   }
