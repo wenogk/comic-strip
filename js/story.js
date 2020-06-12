@@ -170,7 +170,7 @@ function restart() { //function to restart the story from the beginning
   boxFullyHide();  //set the box controls to be not visible
   getLanguageDropsBackToFirstState();  //set the language "droplet" buttons to the initial state by animation
   emptyAllPathsExceptOne(99);  //empty all paths so space is saved,
-  gsap.to(".path_" + currentPath, {duration: 2, opacity: "0", display:"none", ease: "power4.out"});
+  gsap.to(".path_" + currentPath, {duration: 3, opacity: "0", display:"none", ease: "power4.out"});
   currentPath = 0;
   nextPossible = false;
   backPossible = false;

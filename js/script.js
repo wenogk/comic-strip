@@ -36,9 +36,9 @@ gsap.to(".language3", {duration: 3, top: "50%", opacity:1});
 }, 9000);
 
 function getLanguageDropsBackToFirstState() {  // animation of the language "droplet" buttons to go to initial state
-  gsap.to(".language1", {duration: 1, top: "48%", opacity:1, display: "block"});
-  gsap.to(".language2", {duration: 1, top: "48%", opacity:1, display: "block"});
-  gsap.to(".language3", {duration: 1, top: "48%", opacity:1, display: "block"});
+  gsap.to(".language1", {duration: 2, top: "48%", opacity:1, display: "block"});
+  gsap.to(".language2", {duration: 2, top: "48%", opacity:1, display: "block"});
+  gsap.to(".language3", {duration: 2, top: "48%", opacity:1, display: "block"});
 }
 
 function hideLanguageDrops() { // leaving animation of the language "droplet" buttons
