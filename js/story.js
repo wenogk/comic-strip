@@ -256,7 +256,7 @@ By Pamela Martinez, Saad Teeti, and Romeno Wenogk
     aboutContent = `
     <h1>Este proyecto</h1>
 
-El propósito de este cómic es enseñar a los chicxs a normalizar la existencia de la menstruación. Hoy, muchas ninñas y mujeres en todo el mundo continúan sin medidas recursos higiénicos básicos para atender su salud. Incluso, millones de niñas alrededor del mundo hoy interrumpen su educación después de tener su primera menstruación.
+El propósito de este cómic es enseñar a los chicxs a normalizar la existencia de la menstruación. Hoy, muchas niñas y mujeres en todo el mundo continúan sin medidas recursos higiénicos básicos para atender su salud. Incluso, millones de niñas alrededor del mundo hoy interrumpen su educación después de tener su primera menstruación.
 Es muy importante empoderar a las jóvenes dándoles acceso a información y recursos para que puedan desarrollar una relación saludable entre su período, sus cuerpos y su autoestima. La menstruación suena aterradora para muchas personas porque es un tema poco hablado en muchas culturas. La menstruación se percibe como un tabú en diferentes sociedades, creando en sí un ambiente de vergüenza y miedo. Esto contribuye a la desigualdad de género en todos los ámbitos de desarrollo humano.
 
 Al crear este proyecto, esperamos normalizar este tema desde la infancia en nuestras propias culturas, para que las nuevas generaciones se expresen libremente sobre los cambios de su cuerpo.
