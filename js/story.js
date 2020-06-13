@@ -53,7 +53,7 @@ $( ".restartButton" ).click(function() { //onclick listener for the restart butt
 });
 
 function emptyAllPathsExceptOne(id) { //for space optimization, basically once a path is loaded after that path has been passed that HTML dom element is removed therefore reducing the load on the browser
-  for(let x=0; x<8; x++) {
+  for(let x=0; x<9; x++) {
     if(x!=id) {
       $(".path_" + x).remove();
     } else {
