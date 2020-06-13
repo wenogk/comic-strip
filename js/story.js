@@ -61,9 +61,9 @@ function emptyAllPathsExceptOne(id) { //for space optimization, basically once a
   }
 }
 function svgPanel(file, isCols = false) { // Function that takes in a file param and returns a div with the image and relavant classes based on the second param to set whether it is a full size image or a column image
-  let classVal = isCols ? "storySvgCols" : "storySvg"; //setting relevant classes
+  let classVal = isCols ? "tableSvgCol" : "storySvg"; //setting relevant classes
 
-  let storySvgImage = isCols ? "storySvgColImage" : "storySvgImage img-responsive"; //setting relevant classes
+  let storySvgImage = isCols ? "storySvgColImage img-responsive" : "storySvgImage img-responsive"; //setting relevant classes
   let styles = (!file.startsWith("panel7")) ? "cursor: url('https://wenogk.github.com/comic-strip/assets/music36.png'), auto;" : ""; //Adding the audio cursor on hover to all images except the last one as there is no sound in that one
   //return `<object type='image/svg+xml' class='${classVal} objectHolder alias' data='assets/${language}/${file}.svg'></object>`;
   return `<div style="${styles}" class='${classVal} objectHolder'><img class="${storySvgImage}" src='assets/${language}/${file}.svg' /></div>`; // the src attribute here is what allows us to dynamically get different language stories on the fly with minimal changes in the code
@@ -85,17 +85,13 @@ function loadPath(id, isNewStory = true) { // function that takes in the path id
   } else if(id == 2) {
     return `
     <div style="background-image:url(assets/bg3.jpg); background-repeat: repeat;" class="path_${id} ${isNewStory ? "newStory" : "prevStory"}" >
-      <div class="vertical-center">
-        <div class='container three-col-panel'>
-          <div class='row'>
-             <div class='col-md-6 col-xs-12 imgColumn vertical-center path_${id}b'>
-              ${svgPanel("panel1b", true)}
-              </div>
-              <div class='col-md-6 col-xs-12 imgColumn vertical-center path_${id}c'>
-               ${svgPanel("panel1c", true)}
-              </div>
-            </div>
-          </div>
+      <div class="vertical-center text-center">
+        <table class="centerTable">
+        <tr>
+          <td class="path_${id}b tdCol">${svgPanel("panel1b", true)}</td>
+          <td class="path_${id}c">${svgPanel("panel1c", true)}</td>
+        </tr>
+        </table>
         </div>
       </div>
     `
